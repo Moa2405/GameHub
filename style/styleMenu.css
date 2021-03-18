@@ -110,6 +110,7 @@ header {
 }
 
 .menu-balck {
+  display: none;
   padding: 17.5px 17.5px;
   display: flex;
   flex-direction: column;

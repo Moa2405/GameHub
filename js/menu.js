@@ -9,6 +9,7 @@ const menuArrow = document.querySelector('svg.arrow');
 navMenu.addEventListener('click', function() {
     console.log("menu inn")
     menuBlur.style.display = "block"
+    menuBlack.style.display = "block"
     menuBlack.style.transform = "translateX(0px)"
 });
 
@@ -16,11 +17,13 @@ menuBlur.addEventListener("click", function() {
     console.log("menu out")
     menuBlur.style.display = "none"
     menuBlack.style.transform = "translateX(190px)"
+    menuBlack.style.display = "none"
 })
 
 menuArrow.addEventListener('click', function() {
     console.log("menu out")
     menuBlur.style.display = "none"
     menuBlack.style.transform = "translateX(190px)"
+    menuBlack.style.display = "none"
     
 })
