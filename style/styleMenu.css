@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #292929;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  height: 71px;
+  width: 100vw;
+  background-color: #000000;
+  border: #03dac6 solid 1px;
+  box-shadow: black 3px 3px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 6px;
+}
+
+.nav-logo .logo-img {
+  height: 40px;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+
+#input-search {
+  height: 27px;
+  width: 66px;
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  border: none;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.search-button {
+  width: 33px;
+  border-radius: 0px 4px 4px 0px;
+  height: 27px;
+  border: none;
+  background-color: white;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.nav-login-button {
+  background-color: #03dac6;
+  border: none;
+  height: 27px;
+  width: 100px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 27px;
+  cursor: pointer;
+}
+
+.nav-menu > * {
+  background-color: #03dac6;
+  height: 5px;
+  width: 35px;
+}
+
+.cart {
+  display: none;
+}
+
+.cart a i {
+  color: #03dac6;
+}
+
+.menu-blur {
+  display: none;
+  opacity: 93.3%;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  transition: 0.5s ease;
+}
+
+.menu-balck {
+  padding: 17.5px 17.5px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50%;
+  z-index: 20;
+  height: 50vh;
+  background-color: black;
+  right: 0px;
+  top: 0px;
+  transition: 0.5s ease;
+  transform: translateX(190px);
+}
+
+.menu-black-links {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.menu-black-links > * {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.arrow {
+  align-self: flex-end;
+}

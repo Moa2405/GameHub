@@ -2,21 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleMenu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/75f639a8d0.js" crossorigin="anonymous"></script>
     <title>GameHub</title>
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Hello GameHub</h1>
-        <h2>Im here</h2>
-    </body>
-    </html>
+    <div class="menu-balck">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="43.828" height="33.657" viewBox="0 0 43.828 33.657">
+            <g id="Group_50" data-name="Group 50" transform="translate(-315.672 -14.672)">
+              <line id="Line_53" data-name="Line 53" x2="14" y2="14" transform="translate(318.5 31.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
+              <line id="Line_54" data-name="Line 54" x1="14" y2="14" transform="translate(318.5 17.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
+              <line id="Line_55" data-name="Line 55" x1="39" transform="translate(318.5 31.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
+            </g>
+        </svg> 
+        <div class="menu-black-links">
+            <a href="#">Home</a>
+            <a href="#">Bay Games</a>
+            <a href="#">Sell Game</a>
+            <a href="#">Contact</a>
+            <a href="#">About Us</a>
+        </div>
+    </div>
+    <div class="menu-blur"></div>
+    
+    <header>
+        <a class="nav-logo" href="#"><img class="logo-img" src="assets/Logo/GameHub_Logo.png" alt="Logo-Home"></a>
+
+        <div class="nav-search">
+            <input type="text" placeholder="Search" name="search" id="input-search">
+            <button class="search-button">
+                <i class="fas fa-search fa-2x"></i>
+            </button>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">bye game</a></li>
+                <li><a href="#">sell game</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">about us</a></li>
+                
+            </ul>
+        </div>
+        <button class="nav-login-button">Login</button>
+        <div class="nav-menu">
+            <div class="stripe1"></div>
+            <div class="stripe2"></div>
+            <div class="stripe3"></div>
+        </div>
+        <div class="cart">
+            <a href="#"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        </div>
+    </header>
+    
+
+    <script src="js/menu.js"></script>
 </body>
 </html>
