@@ -372,7 +372,7 @@ main {
   }
   nav {
     padding: 0px;
-    position: inherit;
+    position: initial;
     height: 27px;
     width: 45%;
     transform: translateX(0%);
