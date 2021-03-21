@@ -142,11 +142,6 @@ main {
   width: 100vw;
 }
 
-.black-svg-background svg {
-  position: absolute;
-  display: none;
-}
-
 .home1-section {
   position: relative;
 }
