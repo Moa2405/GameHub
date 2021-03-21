@@ -8,58 +8,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/75f639a8d0.js" crossorigin="anonymous"></script>
-    <title>GameHub</title>
+    <script src="https://kit.fontawesome.com/75f639a8d0.js" crossorigin="anonymous"></script>    <title>GameHub</title>
 </head>
 <body>
-    <div class="menu-balck">
-        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="43.828" height="33.657" viewBox="0 0 43.828 33.657">
-            <g id="Group_50" data-name="Group 50" transform="translate(-315.672 -14.672)">
-              <line id="Line_53" data-name="Line 53" x2="14" y2="14" transform="translate(318.5 31.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
-              <line id="Line_54" data-name="Line 54" x1="14" y2="14" transform="translate(318.5 17.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
-              <line id="Line_55" data-name="Line 55" x1="39" transform="translate(318.5 31.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
-            </g>
-        </svg> 
-        <div class="menu-black-links">
-            <a href="#">Home</a>
-            <a href="#">Bay Games</a>
-            <a href="#">Sell Game</a>
-            <a href="#">Contact</a>
-            <a href="#">About Us</a>
-        </div>
-    </div>
-    <div class="menu-blur"></div>
-    
     <header>
         <a class="nav-logo" href="#"><img class="logo-img" src="images/GameHub_Logo.png" alt="Logo-Home"></a>
-
         <div class="nav-search">
             <input type="text" placeholder="Search" name="search" id="input-search">
             <button class="search-button">
                 <i class="fas fa-search fa-2x"></i>
             </button>
         </div>
-        <div class="nav-links">
+        <nav>
             <ul>
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="43.828" height="33.657" viewBox="0 0 43.828 33.657">
+                    <g id="Group_50" data-name="Group 50" transform="translate(-315.672 -14.672)">
+                      <line id="Line_53" data-name="Line 53" x2="14" y2="14" transform="translate(318.5 31.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
+                      <line id="Line_54" data-name="Line 54" x1="14" y2="14" transform="translate(318.5 17.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
+                      <line id="Line_55" data-name="Line 55" x1="39" transform="translate(318.5 31.5)" fill="none" stroke="#03dac6" stroke-linecap="round" stroke-width="4"/>
+                    </g>
+                </svg>
                 <li><a href="#">bye game</a></li>
                 <li><a href="#">sell game</a></li>
                 <li><a href="#">contact</a></li>
                 <li><a href="#">about us</a></li>
-                
             </ul>
-        </div>
+        </nav>
         <button class="nav-login-button">Login</button>
-        <div class="nav-menu">
-            <div class="stripe1"></div>
-            <div class="stripe2"></div>
-            <div class="stripe3"></div>
-        </div>
         <div class="cart">
             <a href="#"><i class="fas fa-shopping-cart fa-2x"></i></a>
         </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
     </header>
-    
-
+    <main>
+        <section class="home1-section">
+            <div class="header-one">
+                <h1 class="main-header">The place to buy games<br/>And sell your used games
+                </h1>
+                <h2 class="sub-header-to">Support your fellow gamer by buying used games,<br/> or buy new games and earn GamedHub Points to<br/> get 10$ credit</h2>
+            </div>
+            <div class="cta-boxes">
+                <div class="cta-box-green">
+                    <h2>Buy new and<br/>used games</h2>
+                    <h3>Find your new game form<br/>our universe of games</h3>
+                    <a href="#"><button class="cta-button-green">Universe of games</button></a>
+                </div>
+                <div class="cta-box-purple">
+                    <h2>Sell your used game</h2>
+                    <h3>We will buy your used<br/>game. Get money back or<br/> +10% credit on your<br/> GamedHub wallet </h3>
+                    <a href="#"><button class="cta-button-purple">Sell your Game</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="home2-section">
+            <h1>Get Your Latest Games Here First</h1>
+            <div class="pre-order-box">
+                <h2>Pre-Order Your<br/>Game Today</h2>
+                <button class="pre-order-button">Pre-Order</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>© 2021 Gamehub AS. All rights reserved</h3>
+        <div class="footer-links">
+            <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitch fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+    </footer>
     <script src="js/menu.js"></script>
 </body>
 </html>

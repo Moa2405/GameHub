@@ -1,29 +1,13 @@
-const navMenu = document.querySelector('div.nav-menu');
-const menuBlur = document.querySelector('div.menu-blur');
-const menuBlack = document.querySelector('div.menu-balck')
-const menuArrow = document.querySelector('svg.arrow');
+const burgerMenu = document.querySelector("div.burger-menu i")
+const nav = document.querySelector("nav")
+const arrowBack = document.querySelector("svg.arrow")
 
-
-
-
-navMenu.addEventListener('click', function() {
-    console.log("menu inn")
-    menuBlur.style.display = "block"
-    menuBlack.style.display = "block"
-    menuBlack.style.transform = "translateX(0px)"
-});
-
-menuBlur.addEventListener("click", function() {
-    console.log("menu out")
-    menuBlur.style.display = "none"
-    menuBlack.style.transform = "translateX(190px)"
-    menuBlack.style.display = "none"
+burgerMenu.addEventListener("click", function (event) {
+    console.log("in")
+    nav.style.transform = "translateX(0%)"
 })
 
-menuArrow.addEventListener('click', function() {
-    console.log("menu out")
-    menuBlur.style.display = "none"
-    menuBlack.style.transform = "translateX(190px)"
-    menuBlack.style.display = "none"
-    
+arrowBack.addEventListener("click", function (event) {
+    console.log('out')
+    nav.style.transform = "translateX(110%)"
 })
