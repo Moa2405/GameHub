@@ -3,9 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #292929;
+  background-color: black;
 }
 
 header {
@@ -21,8 +22,6 @@ header {
 
 header,
 footer {
-  position: relative;
-  padding-top: 10px;
   width: 100vw;
   background-color: #000000;
   border: #03dac6 solid 1px;
@@ -30,6 +29,8 @@ footer {
 }
 
 footer {
+  position: relative;
+  padding-top: 10px;
   height: 80px;
 }
 
@@ -119,7 +120,7 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
-.burger-menu i {
+.burger i {
   color: #03dac6;
   cursor: pointer;
 }
@@ -137,14 +138,30 @@ nav ul li a:hover {
 }
 
 main {
+  position: relative;
   width: 100vw;
 }
 
+.black-svg-background svg {
+  position: absolute;
+  display: none;
+}
+
 .home1-section {
+  position: relative;
+}
+
+.home1-backround-img {
+  position: absolute;
+  width: 100%;
+  height: 635px;
   background-image: url("/images/gamer-filter-w700.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  z-index: -1;
+}
+
+.home1-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,15 +173,31 @@ main {
   margin-top: 95px;
 }
 
+.header-one .green-buy {
+  color: #03dac6;
+}
+
+.header-one .purple-sell {
+  color: #c293fb;
+}
+
+.sub-header-to .green-points {
+  color: #03dac6;
+}
+
 .header-one h1 {
   font-family: "Roboto Slab", serif;
   color: white;
-  font-size: 24px;
-  letter-spacing: 2.9px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
   margin-bottom: 63px;
 }
 
 .sub-header-to {
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
   display: none;
 }
 
@@ -196,11 +229,11 @@ main {
   align-items: center;
 }
 
-.cta-box-green h3 {
-  display: none;
-}
-
-.cta-box-purple h3 {
+.cta-box-purple p,
+.cta-box-green p {
+  font-weight: normal;
+  font-size: 12px;
+  color: white;
   display: none;
 }
 
@@ -247,19 +280,28 @@ main {
 }
 
 .home2-section {
-  background-image: url("/images/pre-order-filter-w700.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+
+.home2-background-img {
+  position: absolute;
   width: 100%;
   height: 400px;
-  background-color: #c5c5c5;
+  background-image: url("/images/pre-order-filter-w700.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.home2-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.home2-section h1 {
+.home2-content-container h1 {
   color: white;
   font-family: "Roboto Slab", serif;
   font-size: 21px;
@@ -285,6 +327,13 @@ main {
   font-weight: bold;
 }
 
+.home2-content-container > p {
+  font-size: 24px;
+  margin-top: 25px;
+  color: white;
+  display: none;
+}
+
 .pre-order-button {
   width: 70%;
   height: 60px;
@@ -296,24 +345,34 @@ main {
 }
 
 @media screen and (min-width: 600px) {
+  nav {
+    transition: 0s;
+  }
   .cart {
     display: block;
   }
-  .burger-menu {
+  .burger {
     justify-self: flex-end;
+  }
+  .header-one h1 {
+    letter-spacing: 4px;
   }
 }
 
 @media screen and (min-width: 700px) {
-  header {
-    padding: 17px;
+  body {
+    width: 100vw;
   }
-  .burger-menu {
+  header {
+    padding-right: 25px;
+    padding-left: 17px;
+  }
+  .burger {
     display: none;
   }
   nav {
     padding: 0px;
-    position: relative;
+    position: inherit;
     height: 27px;
     width: 45%;
     transform: translateX(0%);
@@ -327,8 +386,72 @@ main {
   .search-button {
     background-color: #03dac6;
   }
+  .header-one h1 {
+    letter-spacing: 6px;
+  }
+  .header-one h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .sub-header-to {
+    display: inline-block;
+  }
+  .cta-boxes {
+    align-items: center;
+    flex-direction: row;
+  }
+  .cta-box-green,
+  .cta-box-purple {
+    height: 170px;
+    margin: 25px;
+  }
+  .home2-content-container h1 {
+    font-size: 32px;
+  }
+  .home2-content-container p {
+    display: inline-block;
+  }
+  .footer-links {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: initial;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 @media screen and (min-width: 900px) {
+  .home1-section {
+    height: 690px;
+  }
+  .home2-section {
+    height: 500px;
+  }
+  .home1-backround-img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 1200px;
+    height: 660px;
+    background-image: url("/images/gamerV2-w900.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+  .home2-background-img {
+    left: 400px;
+    width: 600px;
+    height: 500px;
+  }
+  .home1-content-container,
+  .home2-content-container {
+    align-items: flex-start;
+    margin-left: 160px;
+  }
   nav {
     width: 33%;
   }
@@ -338,6 +461,27 @@ main {
   }
   #input-search {
     width: 180px;
+  }
+  .cta-boxes {
+    margin-top: 40px;
+  }
+
+  .cta-box-purple,
+  .cta-box-green {
+    align-items: center;
+    height: 300px;
+    width: 250px;
+    margin-top: 0px;
+  }
+  .cta-box-green h2,
+  .cta-box-purple h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .cta-box-green p,
+  .cta-box-purple p {
+    display: inline-block;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1200px) {

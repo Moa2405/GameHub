@@ -1,4 +1,4 @@
-const burgerMenu = document.querySelector("div.burger-menu i")
+const burgerMenu = document.querySelector("div.burger i")
 const nav = document.querySelector("nav")
 const arrowBack = document.querySelector("svg.arrow")
 
