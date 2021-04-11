@@ -1,298 +1,277 @@
-.home1-section {
-  position: relative;
-  background-image: url("/images/gamer-filter-w700.jpg");
-  background-position: center;
-  background-size: cover;
+:root {
+  --primary-color: #03dac6;
+  --secondery-color: #c293fb;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #b1b1b1;
+  --background-color: #292929;
 }
 
-/*.home1-backround-img {
-  position: absolute;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--background-color);
+}
+
+main {
+  margin-top: 30px;
+  place-self: center;
+}
+
+.content-header {
+  margin: 2em;
+}
+
+.content-header h1 {
+  font-size: 34px;
+  color: var(--primary-text-color);
+  font-family: "Roboto Slab", serif;
+}
+
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+}
+
+header,
+footer {
+  height: 50px;
   width: 100%;
-  height: 635px;
-  
-  background-repeat: no-repeat;
-  z-index: -1;
-}*/
+  background-color: #000000;
+  border: var(--primary-color) solid 1px;
+  box-shadow: black 3px 3px 20px;
+}
 
-.home1-content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 635px;
-  width: 95%;
+.header-container {
   margin: auto;
-}
-
-.header-one {
-  margin-top: 95px;
-}
-
-.header-one .green-buy {
-  color: #03dac6;
-}
-
-.header-one .purple-sell {
-  color: #c293fb;
-}
-
-.sub-header-to .green-points {
-  color: #03dac6;
-}
-
-.header-one h1 {
-  font-family: "Roboto Slab", serif;
-  color: white;
-  text-transform: uppercase;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 63px;
-}
-
-.sub-header-to {
-  color: white;
-  font-size: 24px;
-  font-weight: 200;
-  display: none;
-}
-
-.cta-boxes {
-  display: flex;
-  flex-direction: column;
-}
-
-.cta-box-purple {
-  margin-top: 20px;
-  height: 137px;
-  border: #c293fb solid 2px;
-}
-
-.cta-box-green {
-  margin-bottom: 20px;
-  height: 170px;
-  border: #03dac6 solid 2px;
-}
-
-.cta-box-green,
-.cta-box-purple {
-  width: 215px;
-  position: relative;
-  padding-top: 15px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cta-box-purple p,
-.cta-box-green p {
-  font-weight: normal;
-  font-size: 12px;
-  color: white;
-  display: none;
-}
-
-.cta-box-green a {
-  position: absolute;
-  bottom: 20px;
-}
-
-.cta-box-green h2 {
-  font-size: 24px;
-  color: white;
-}
-
-.cta-box-purple h2 {
-  font-size: 20px;
-  color: white;
-}
-
-.cta-button-green {
-  padding-top: 10px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  width: 195px;
-  height: 42px;
-  border: none;
-  border-radius: 4px;
-  background-color: #03dac6;
-  font-size: 17px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.cta-box-purple a {
-  position: absolute;
-  bottom: 30px;
-}
-
-.cta-button-purple {
-  padding-top: 10px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  width: 179px;
-  height: 42px;
-  border: none;
-  border-radius: 4px;
-  background-color: #c293fb;
-  text-transform: uppercase;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.home2-section {
-  height: 390px;
-  background-image: url("/images/pre-order-filter-w700.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.home2-content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.home2-content-container h1 {
-  color: white;
-  font-family: "Roboto Slab", serif;
-  font-size: 21px;
-  margin-top: 34px;
-}
-
-.pre-order-box {
-  border: #03dac6 solid 2px;
-  border-radius: 4px;
-  width: 250px;
-  height: 200px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  padding: 0px 6px;
 }
 
-.pre-order-box h2 {
-  color: white;
-  font-weight: bold;
+footer {
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
-.home2-content-container > p {
-  font-size: 24px;
-  margin-top: 25px;
-  color: white;
+.footer-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  height: 50px;
+  max-width: 1400px;
+}
+
+footer h3 {
+  color: #ffffff7e;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-links {
+  max-width: 160px;
+}
+
+.footer-links > * {
+  color: #03dac6;
+}
+
+.nav-logo .logo-img {
+  height: 45px;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+
+#input-search {
+  height: 27px;
+  width: 66px;
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  border: none;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding-left: 5px;
+  padding-top: 2px;
+  width: 33px;
+  border-radius: 0px 4px 4px 0px;
+  height: 27px;
+  border: none;
+  background-color: white;
+}
+
+.search-button i {
+  color: black;
+  font-size: 23px;
+}
+
+nav {
+  max-width: 400px;
+  padding: 17.5px 17.5px;
+  position: absolute;
+  top: 49px;
+  right: 0px;
+  background-color: black;
+  height: 50vh;
+  width: 50%;
+  transform: translateX(110%);
+  transition: 0.3s ease-in;
+}
+
+.nav-toggel {
+  max-width: 400px;
+  padding: 17.5px 17.5px;
+  position: absolute;
+  top: 49px;
+  right: 0px;
+  background-color: black;
+  height: 50vh;
+  width: 50%;
+  transform: translateX(0%);
+  transition: 0.3s ease-in;
+}
+
+nav ul {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: var(--primary-text-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-login-button {
+  text-align: center;
+  padding-top: 3px;
+  color: black;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  border: none;
+  height: 27px;
+  width: 100px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.burger i {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.cart {
   display: none;
 }
 
-.pre-order-button {
-  width: 70%;
-  height: 60px;
-  border: none;
-  border-radius: 4px;
-  background-color: #03dac6;
-  font-size: 24px;
-  font-weight: 600;
+.cart a i {
+  color: var(--primary-color);
+}
+
+.arrow i {
+  color: #03dac6;
+}
+
+.arrow {
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
-  .home1-section {
-    height: 800px;
-    width: 600px;
+  .cart {
+    display: block;
   }
-  .home2-section {
-    height: 500px;
-    width: 600px;
-  }
-  .header-one h1 {
-    letter-spacing: 4px;
+  .burger {
+    justify-self: flex-end;
   }
 }
 
 @media screen and (min-width: 700px) {
-  .header-one h1 {
-    letter-spacing: 6px;
+  .header-container {
+    padding-right: 25px;
+    padding-left: 17px;
   }
-  .header-one h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+  .burger {
+    display: none;
   }
-  .sub-header-to {
-    display: inline-block;
+  nav {
+    padding: 0px;
+    position: static;
+    height: 27px;
+    width: 45%;
+    transform: translateX(0%);
+    transition: 0s;
   }
-  .cta-boxes {
-    align-items: center;
+  nav ul {
     flex-direction: row;
   }
-  .cta-box-green,
-  .cta-box-purple {
-    height: 170px;
-    margin: 25px;
+  .arrow {
+    display: none;
   }
-  .home2-content-container h1 {
-    font-size: 32px;
+  .search-button {
+    background-color: var(--primary-color);
   }
-  .home2-content-container p {
-    display: inline-block;
+  .footer-links {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: initial;
+  }
+  .footer-container {
+    justify-content: space-around;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .home1-section {
-    height: 800px;
-    width: 900px;
+  nav {
+    width: 33%;
   }
-  .home2-section {
-    height: 600px;
-    width: 900px;
+  .nav-search {
+    margin-left: 30px;
+    width: 33%;
   }
-  .home1-section {
-    background-image: url("/images/gamerV2-w900.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .home2-background-img {
-    left: 400px;
-    width: 600px;
-    height: 500px;
-  }
-  .home1-content-container,
-  .home2-content-container {
-    align-items: flex-start;
-    margin-left: 160px;
-  }
-  .cta-boxes {
-    margin-top: 40px;
-  }
-
-  .cta-box-purple,
-  .cta-box-green {
-    align-items: center;
-    height: 300px;
-    width: 250px;
-    margin-top: 0px;
-  }
-  .cta-box-green h2,
-  .cta-box-purple h2 {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  .cta-box-green p,
-  .cta-box-purple p {
-    display: inline-block;
-    font-size: 18px;
+  #input-search {
+    width: 180px;
   }
 }
+
 @media screen and (min-width: 1200px) {
-  .home1-section {
-    height: 800px;
-    width: 1200px;
+  nav {
+    width: 25%;
   }
-  .home2-section {
-    height: 500px;
-    width: 1200px;
+  .nav-search {
+    width: 43%;
+  }
+  #input-search {
+    width: 270px;
   }
 }

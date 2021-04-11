@@ -29,7 +29,7 @@ section {
 }
 
 .success-icon i {
-  color: var(--primary-color);
+  color: var(--secondery-color);
 }
 
 .purchase-header,

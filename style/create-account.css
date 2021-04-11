@@ -4,6 +4,7 @@
 }
 
 .section-header {
+  width: 250px;
   max-width: 400px;
   color: var(--primary-text-color);
   margin-top: 2em;
@@ -35,6 +36,7 @@ form input {
   font-size: 18px;
   margin-bottom: 1em;
   height: 35px;
+  width: 300px;
   max-width: 300px;
   border: 2px solid var(--primary-color);
   background-color: #292929;
