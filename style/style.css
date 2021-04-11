@@ -1,167 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: black;
-}
-
-header {
-  z-index: 10;
-  position: fixed;
-  top: 0px;
-  height: 71px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 6px;
-}
-
-header,
-footer {
-  width: 100vw;
-  background-color: #000000;
-  border: #03dac6 solid 1px;
-  box-shadow: black 3px 3px 20px;
-}
-
-footer {
-  position: relative;
-  padding-top: 10px;
-  height: 80px;
-}
-
-footer h3 {
-  text-align: center;
-  color: #ffffff7e;
-  font-size: 16px;
-  font-weight: 100;
-}
-
-.footer-links {
-  position: absolute;
-  right: 15px;
-  bottom: 7.5px;
-}
-
-.footer-links > * {
-  color: #03dac6;
-}
-
-.nav-logo .logo-img {
-  height: 60px;
-}
-
-.nav-search {
-  display: flex;
-  align-items: center;
-}
-
-#input-search {
-  height: 27px;
-  width: 66px;
-  border-radius: 4px 0px 0px 4px;
-  outline: none;
-  border: none;
-  padding: 7px;
-  font-size: 16px;
-}
-
-.search-button {
-  width: 33px;
-  border-radius: 0px 4px 4px 0px;
-  height: 27px;
-  border: none;
-  background-color: white;
-}
-
-nav {
-  padding: 17.5px 17.5px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: black;
-  height: 50vh;
-  width: 50%;
-  transform: translateX(110%);
-  transition: 0.3s ease-in;
-}
-
-nav ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #b1b1b1;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-nav ul li a:hover {
-  color: white;
-}
-
-.nav-login-button {
-  background-color: #03dac6;
-  border: none;
-  height: 27px;
-  width: 100px;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.burger i {
-  color: #03dac6;
-  cursor: pointer;
-}
-
-.cart {
-  display: none;
-}
-
-.cart a i {
-  color: #03dac6;
-}
-
-.arrow {
-  align-self: flex-end;
-}
-
-main {
-  position: relative;
-  width: 100vw;
-}
-
 .home1-section {
   position: relative;
+  background-image: url("/images/gamer-filter-w700.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.home1-backround-img {
+/*.home1-backround-img {
   position: absolute;
   width: 100%;
   height: 635px;
-  background-image: url("/images/gamer-filter-w700.jpg");
-  background-position: center;
+  
   background-repeat: no-repeat;
   z-index: -1;
-}
+}*/
 
 .home1-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 635px;
-  width: 100%;
+  width: 95%;
+  margin: auto;
 }
 
 .header-one {
@@ -248,6 +107,10 @@ main {
 }
 
 .cta-button-green {
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
   width: 195px;
   height: 42px;
   border: none;
@@ -264,6 +127,10 @@ main {
 }
 
 .cta-button-purple {
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
   width: 179px;
   height: 42px;
   border: none;
@@ -275,19 +142,10 @@ main {
 }
 
 .home2-section {
-  height: 400px;
-  position: relative;
-  width: 100%;
-}
-
-.home2-background-img {
-  position: absolute;
-  width: 100%;
-  height: 400px;
+  height: 390px;
   background-image: url("/images/pre-order-filter-w700.jpg");
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  z-index: -1;
 }
 
 .home2-content-container {
@@ -340,14 +198,13 @@ main {
 }
 
 @media screen and (min-width: 600px) {
-  nav {
-    transition: 0s;
+  .home1-section {
+    height: 800px;
+    width: 600px;
   }
-  .cart {
-    display: block;
-  }
-  .burger {
-    justify-self: flex-end;
+  .home2-section {
+    height: 500px;
+    width: 600px;
   }
   .header-one h1 {
     letter-spacing: 4px;
@@ -355,32 +212,6 @@ main {
 }
 
 @media screen and (min-width: 700px) {
-  body {
-    width: 100vw;
-  }
-  header {
-    padding-right: 25px;
-    padding-left: 17px;
-  }
-  .burger {
-    display: none;
-  }
-  nav {
-    padding: 0px;
-    position: initial;
-    height: 27px;
-    width: 45%;
-    transform: translateX(0%);
-  }
-  nav ul {
-    flex-direction: row;
-  }
-  .arrow {
-    display: none;
-  }
-  .search-button {
-    background-color: #03dac6;
-  }
   .header-one h1 {
     letter-spacing: 6px;
   }
@@ -406,34 +237,22 @@ main {
   .home2-content-container p {
     display: inline-block;
   }
-  .footer-links {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: initial;
-  }
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
 }
+
 @media screen and (min-width: 900px) {
   .home1-section {
-    height: 690px;
+    height: 800px;
+    width: 900px;
   }
   .home2-section {
-    height: 500px;
+    height: 600px;
+    width: 900px;
   }
-  .home1-backround-img {
-    position: absolute;
-    top: 30px;
-    right: 30px;
+  .home1-section {
     background-image: url("/images/gamerV2-w900.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
   }
   .home2-background-img {
     left: 400px;
@@ -444,16 +263,6 @@ main {
   .home2-content-container {
     align-items: flex-start;
     margin-left: 160px;
-  }
-  nav {
-    width: 33%;
-  }
-  .nav-search {
-    margin-left: 30px;
-    width: 33%;
-  }
-  #input-search {
-    width: 180px;
   }
   .cta-boxes {
     margin-top: 40px;
@@ -478,13 +287,12 @@ main {
   }
 }
 @media screen and (min-width: 1200px) {
-  nav {
-    width: 25%;
+  .home1-section {
+    height: 800px;
+    width: 1200px;
   }
-  .nav-search {
-    width: 43%;
-  }
-  #input-search {
-    width: 270px;
+  .home2-section {
+    height: 500px;
+    width: 1200px;
   }
 }

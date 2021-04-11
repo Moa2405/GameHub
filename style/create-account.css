@@ -1,0 +1,68 @@
+.content-header {
+  font-family: "Roboto Slab", serif;
+  color: var(--primary-text-color);
+}
+
+.section-header {
+  max-width: 400px;
+  color: var(--primary-text-color);
+  margin-top: 2em;
+  border: 2px solid var(--secondery-color);
+  padding: 3px;
+}
+
+.create-account-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+form {
+  place-self: center;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+form input {
+  color: var(--primary-text-color);
+  font-size: 18px;
+  margin-bottom: 1em;
+  height: 35px;
+  max-width: 300px;
+  border: 2px solid var(--primary-color);
+  background-color: #292929;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  border: none;
+  background-color: var(--secondery-color);
+  color: black;
+  font-weight: 500;
+  height: 40;
+  width: 150px;
+}
+
+.create-account-icon {
+  display: none;
+  height: 225px;
+  width: 250px;
+  background-image: url("/images/create-account.png");
+  background-size: cover;
+}
+
+@media screen and (min-width: 700px) {
+  .create-account-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .create-account-icon {
+    display: block;
+  }
+}

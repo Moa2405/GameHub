@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/account-page.css">
+    <link rel="stylesheet" href="/style/nav.css">
+    <script src="https://kit.fontawesome.com/75f639a8d0.js" crossorigin="anonymous"></script>
+    <title>AccountPage</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="nav-logo" href="index.html"><img class="logo-img" src="images/GameHub_Logo.png" alt="Logo-Home"></a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search" name="search" id="input-search">
+                <a href="search-resullt.html" class="search-button">
+                    <i class="fas fa-search fa-1x"></i>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="games.html">bye game</a></li>
+                    <li><a href="create-account.html">sell game</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </nav>
+            <a href="account-page.html" class="nav-login-button">Login</a>
+            <div class="cart">
+                <a href="checkout.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+            </div>
+            <div class="burger">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-left fa-2x"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-header"><h1>Accaount</h1></div>
+        <div class="grid-container">
+            <section class="profil-info">
+                <div class="profile-header">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                    <h4>Profile Information</h4>
+                    <i class="fas fa-edit fa-1x"></i>
+                </div>    
+                <div class="profile-info-section">
+                    <div class="profile-info-lable">
+                        <h5>Name:</h5>
+                        <h5>E-Mail:</h5>
+                        <h5>Phone:</h5>
+                        <h5>Address:</h5>
+                        <h5>Zip Code:</h5>
+                        <h5>State:</h5>
+                        <h5>Cuntry:</h5>
+                        <h5>Password:</h5>
+                    </div>
+                    <div class="profile-info-data">
+                        <h5>Ola Normand</h5>
+                        <h5>Ola@gmail.com</h5>
+                        <h5>004799887766</h5>
+                        <h5>Ole Norvei 10</h5>
+                        <h5>9999</h5>
+                        <h5>Oslo</h5>
+                        <h5>Norway</h5>
+                        <h5 id="change-password">Change Password</h5>
+                    </div>
+                </div>
+            </section>
+            <section class="wallet">
+                <div class="wallet-header">
+                    <i class="fas fa-wallet fa-2x"></i>
+                    <h4>Your GameHub Wallet</h4>
+                </div>
+                <div class="wallet-sub-header">
+                    <h4>Get to 100 points and get<br>
+                        10$ in credit</h4>
+                </div>
+                <div class="wallet-progress">
+                    <h4>Your progress</h4>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <div class="progression">
+                        <h4>You have 50 points</h4>
+                    </div>
+                </div>
+                <div class="wallet-balance">
+                    <h4>Your GameHub Wallet<br> 
+                        Balance
+                    </h4>
+                    <div class="balance-amount">0$</div>
+                </div>
+            </section>
+            <section class="recent-transactions">
+                <div class="recent-transaction-header">
+                    <i class="fas fa-cash-register fa-2x"></i>
+                    <h4>Yor recent transactions</h4>
+                </div>
+                <div class="recent-transactions-cards">
+                    <div class="recent-transactions-card-1">
+                        <div class="rtc-cover-container"></div>
+                        <div class="game-content-container">
+                            <div class="game-header">
+                                <div class="game-header">
+                                    <h6>Ping Pong(PlayBox)</h6>
+                                    <h6>New</h6>
+                                </div>
+                            </div>
+                            <p class="date">Aug 01, 2020</p>
+                            <div class="amount-payment-rate">
+                                <h6>$29.99</h6>
+                                <i class="fab fa-cc-visa fa-xs"></i>
+                                <p class="payment-info">**** **** **** 6743</p>
+                                <input class="rate-game" type="button" value="Rate game">
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="recent-transactions-card-2">
+                        <div class="rtc-cover-container-2"></div>
+                        <div class="game-content-container">
+                            <div class="game-header">
+                                <div class="game-header">
+                                    <h6>Ping Pong(PlayBox)</h6>
+                                    <h6>New</h6>
+                                </div>
+                            </div>
+                            <p class="date">Aug 01, 2020</p>
+                            <div class="amount-payment-rate">
+                                <h6>$29.99</h6>
+                                <i class="fab fa-cc-visa fa-xs"></i>
+                                <p class="payment-info">**** **** **** 6743</p>
+                                <input class="rate-game" type="button" value="Rate game">
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="recent-transactions-card-3">
+                        <div class="rtc-cover-container-3"></div>
+                        <div class="game-content-container">
+                            <div class="game-header">
+                                <div class="game-header">
+                                    <h6>Ping Pong(PlayBox)</h6>
+                                    <h6>New</h6>
+                                </div>
+                            </div>
+                            <p class="date">Aug 01, 2020</p>
+                            <div class="amount-payment-rate">
+                                <h6>$29.99</h6>
+                                <i class="fab fa-cc-visa fa-xs"></i>
+                                <p class="payment-info">**** **** **** 6743</p>
+                                <input class="rate-game" type="button" value="Rate game">
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="see-more-butten">
+                    <button>See More</button>
+                </div> 
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <h3>© 2021 Gamehub AS. All rights reserved</h3>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitch fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+.content-header h1 {
+  color: var(--primary-text-color);
+  font-family: "Roboto Slab", serif;
+}
+
+.progress-bar {
+  margin-top: 1em;
+  height: 60px;
+  width: 320px;
+  background-image: url("/images/icons/progressbar5.png");
+  background-size: cover;
+}
+
+section {
+  margin-top: 3em;
+}
+
+.checkout-grid-container {
+  color: var(--primary-text-color);
+  width: 354px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr 1fr;
+  grid-template-rows: 10% 45% 45%;
+  justify-content: center;
+  border-top: 2px solid var(--secondery-color);
+  border-left: 2px solid var(--secondery-color);
+}
+
+.checkout-grid-container > div {
+  border-bottom: 2px solid var(--secondery-color);
+  border-right: 2px solid var(--secondery-color);
+}
+
+.game-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-img1 {
+  background-image: url("/images/game-cover/GameHub_covers1.jpeg");
+}
+
+.game-img2 {
+  background-image: url("/images/game-cover/GameHub_covers2.jpeg");
+}
+
+.game-img1,
+.game-img2 {
+  height: 97px;
+  width: 77px;
+  background-size: cover;
+}
+
+.quantety-container,
+.game-price,
+.total-game-price {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.game-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.new {
+  color: var(--primary-color);
+}
+.used {
+  color: var(--secondery-color);
+}
+
+.payment-container {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 1em;
+  color: var(--primary-text-color);
+  margin: 2.5em 1em;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+form {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*.payment-options input[type="radio"] {
+  color: var(--primary-color);
+}*/
+
+.payment-name-container,
+.card-no,
+.card-cvc,
+.expiry-date {
+  margin: 0.5em 0em;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-text-color);
+}
+
+.payment-name-container input,
+.card-no input,
+.card-cvc input,
+.expiry-date input {
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  height: 35px;
+}
+
+.card-no-cvc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-cvc {
+  width: 30%;
+}
+
+.card-no {
+  width: 68%;
+}
+
+.expiry-date {
+  width: 30%;
+}
+
+.divider {
+  margin: 1em 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.summery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-amount {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70%;
+  margin-bottom: 1em;
+}
+
+.total-amount p {
+  font-weight: 400;
+  font-size: 24px;
+}
+.total-amount h1 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+form a {
+  color: black;
+  text-decoration: none;
+  background-color: var(--secondery-color);
+  text-align: center;
+  height: 45px;
+  width: 70%;
+  align-self: center;
+  border-radius: 4px;
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .checkout-grid-container {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-container {
+    width: 1100px;
+    display: flex;
+    justify-content: space-around;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .progress-bar,
+  #header {
+    align-self: center;
+  }
+}

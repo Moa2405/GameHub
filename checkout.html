@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/nav.css">
+    <link rel="stylesheet" href="/style/checkout.css">
+    <script src="https://kit.fontawesome.com/75f639a8d0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> 
+    <title>Checkout</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="nav-logo" href="index.html"><img class="logo-img" src="images/GameHub_Logo.png" alt="Logo-Home"></a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search" name="search" id="input-search">
+                <a href="search-resullt.html" class="search-button">
+                    <i class="fas fa-search fa-1x"></i>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="games.html">bye game</a></li>
+                    <li><a href="create-account.html">sell game</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </nav>
+            <a href="account-page.html" class="nav-login-button">Login</a>
+            <div class="cart">
+                <a href="checkout.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+            </div>
+            <div class="burger">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-left fa-2x"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-header" id="header"><h1>Cheackout</h1></div>
+        <div class="progress-bar"></div>
+        <div class="section-container">
+            <section>
+                <div class="checkout-grid-container">
+                    <div class="item-label"><p>Items</p></div>
+                    <div class="price-label"><p>Price</p></div>
+                    <div class="quantety-label"><p>Quant</p></div>
+                    <div class="total-prise-label"><p>Total</p></div>
+                    <div class="game-card">
+                        <div class="game-img1"></div>
+                        <div class="game-info">
+                            <p>PingPong<br>(PlayBox)</p>
+                            <p>4K UHD</p>
+                            <p class="used">Used</p>
+                        </div>
+                    </div>
+                    <div class="game-price"><p>$29.99</p></div>
+                    <div class="quantety-container">
+                        <div class="quantety">
+                            <p>1</p>
+                        </div>
+                        <div class="input">
+                            <input type="button" value="+">
+                            <input type="button" value="-">
+                        </div>
+                    </div>
+                    <div class="total-game-price"><p>$29.99</p></div>
+                    <div class="game-card">
+                        <div class="game-img2"></div>
+                        <div class="game-info">
+                            <p>SuperDuper<br>(PlayBox)</p>
+                            <p>4K UHD</p>
+                            <p class="new">New</p>
+                        </div>
+                    </div>
+                    <div class="game-price"><p>$9.99</p></div>
+                    <div class="quantety-container">
+                        <div class="quantety">
+                            <p>1</p>
+                        </div>
+                        <div class="input">
+                            <input type="button" value="+">
+                            <input type="button" value="-">
+                        </div>
+                    </div>
+                    <div class="total-game-price"><p>$29.99</p></div>
+                </div>
+            </section> 
+            <section>
+                <div class="content-header">
+                    <h1>Payment</h1>
+                </div>
+                <div class="payment-container">
+                    <p>Choose a Payment Method</p>
+                    <div class="payment-options">
+                        <div class="visa-master">
+                            <input type="radio" name="visa-master" id="radio">
+                            <i class="fab fa-cc-visa fa-2x"></i>
+                            <i class="fab fa-cc-mastercard fa-2x"></i>
+                        </div>
+                        <div class="pay-pal">
+                            <input type="radio" name="pay-pal-radio" id="pay-pal-radio">
+                            <i class="fab fa-cc-mastercard fa-2x"></i>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="payment-name-container">
+                            <label for="payment-name">Cardholders Name</label>
+                            <input type="text" name="" id="payment-name">
+                        </div>
+                        <div class="card-no-cvc">
+                            <div class="card-no">
+                                <label for="payment-name">Debit/Credit Card Number</label>
+                                <input type="text" name="" id="payment-name">
+                            </div>
+                            <div class="card-cvc">
+                                <label for="card-cvc">Securety Code</label>
+                                <input type="text" name="" id="card-cvc">
+                            </div>
+                        </div>
+                        <div class="expiry-date">
+                            <label for="date">Expiry Date</label>
+                            <input type="text" name="" id="date">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="summery">
+                            <div class="right-side">
+                                <p>Itesm total</p>
+                                <p>Shipping</p>
+                                <p class="gamehub-credit">Gamehub Credit</p>
+                            </div>
+                            <div class="left-side">
+                                <p>$29.99</p>
+                                <p>Free</p>
+                                <p>-$10.00</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="total-amount">
+                            <p>Subtotal</p>
+                            <h1>$29.99</h1>
+                        </div>
+                        <a href="checkout-success.html">Buy Now</a>    
+                    </form>
+                </div>
+            </section> 
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <h3>© 2021 Gamehub AS. All rights reserved</h3>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitch fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

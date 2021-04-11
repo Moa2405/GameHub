@@ -1,0 +1,113 @@
+.content-header {
+  margin-left: 2em;
+}
+
+.content-header h1 {
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+main {
+  max-width: 375px;
+  place-self: center;
+  margin-top: 80px;
+}
+
+section {
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar {
+  margin-top: 1em;
+  height: 111px;
+  width: 320px;
+  background-image: url("/images/icons/checkout-success.svg");
+  background-size: cover;
+}
+
+.success-icon i {
+  color: var(--primary-color);
+}
+
+.purchase-header,
+.purchase-sub-header,
+.receipt-header {
+  margin-top: 1em;
+}
+
+.purchase-sub-header {
+  align-self: flex-start;
+  margin-left: 26px;
+}
+
+.receipt-header {
+  align-self: flex-start;
+  margin-left: 26px;
+}
+
+.receipt-container {
+  margin: 1.5em;
+  padding: 1em;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  position: relative;
+}
+
+.receipt-info {
+  width: 300px;
+  height: 194px;
+  color: var(--primary-text-color);
+  display: grid;
+  align-self: center;
+  justify-content: center;
+  grid-template-columns: 52% 1fr 1fr 1fr;
+  grid-template-rows: 20% 1fr 1fr;
+}
+
+.divider1,
+.divider2 {
+  background-color: var(--primary-color);
+  position: absolute;
+  height: 1px;
+  width: 91%;
+}
+
+.divider1 {
+  top: 44px;
+}
+.divider2 {
+  top: 110px;
+}
+
+.receipt-payment {
+  margin-bottom: 3em;
+  padding: 1em 1em 1em 5em;
+  height: 170px;
+  color: var(--primary-text-color);
+  background-color: black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.receipt-payment > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    max-width: 2000px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .success-section {
+    padding-top: 50px;
+  }
+}
