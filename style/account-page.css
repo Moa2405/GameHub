@@ -245,10 +245,6 @@ section i {
   border-radius: 4px;
 }
 
-.see-more-butten svg {
-  font-size: 16px;
-}
-
 @media screen and (min-width: 757px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
