@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/checkout.css">
-    <script src="https://kit.fontawesome.com/75f639a8d0.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fb2425a635.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> 
     <title>Checkout</title>
@@ -54,6 +54,7 @@
         <div class="progress-bar"></div>
         
             <section>
+                <p style="color: white; font-size: 30px; margin-bottom: 1em;">Your shopping cart<span><i class="fas fa-shopping-cart" style="color: #03dac6; margin-left: 8px;"></i></span></p>
                 <div class="checkout-grid-container">
                     <div class="item-label"><p>Items</p></div>
                     <div class="price-label"><p>Price</p></div>
@@ -100,9 +101,38 @@
                 </div>
             </section> 
             <section>
+                <div class="shipping-container">
+                    <i class="far fa-shipping-fast fa-2x" style="color: #03dac6;"></i>
+                    <p style="color: white; font-size: 30px; margin-bottom: 1em;">Shipment Information</p>
+                    <form class="shipment-form">
+                        <ul>
+                            <li>
+                                <label for="first-name">First Name</label>
+                                <input type="text" name="" id="first-name">
+                            </li>
+                            <li>
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="" id="last-name">
+                            </li>
+                            <li>
+                                <label for="address">Address</label>
+                                <input type="text" name="" id="address">      
+                            </li>
+                            <li>
+                                <label for="zip-code">Zip-Code</label>
+                                <input class="zip-code" type="number" name="" id="zip-code">
+                            </li>
+                            
+                        </ul>
+                        <button disabled type="submit">Confirm shipment details</button>
+
+                    </form>
+                </div>
+            </section>
+            <section>
                 <div class="payment-container">
-                    <div class="content-header">
-                        <p style="color: white; font-size: 30px;" >Payment</p>
+                    <div class="payment-header">
+                        <p style="color: white; font-size: 30px; margin-bottom: 1em;">Payment</p>
                     </div>
                     <p>Choose a Payment Method</p>
                     <div class="payment-options">
@@ -116,7 +146,7 @@
                             <i class="fab fa-cc-paypal fa-2x"></i>
                         </div>
                     </div>
-                    <form>
+                    <form class="payment-form">
                         <div class="payment-name-container">
                             <label for="payment-name">Cardholders Name</label>
                             <input type="text" name="" id="payment-name">
@@ -124,16 +154,16 @@
                         <div class="card-no-cvc">
                             <div class="card-no">
                                 <label for="payment-name">Debit/Credit Card Number</label>
-                                <input type="text" name="" id="payment-name">
+                                <input type="number" name="" id="payment-name">
                             </div>
                             <div class="card-cvc">
                                 <label for="card-cvc">Securety Code</label>
-                                <input type="text" name="" id="card-cvc">
+                                <input type="number" name="" id="card-cvc">
                             </div>
                         </div>
                         <div class="expiry-date">
                             <label for="date">Expiry Date</label>
-                            <input type="text" name="" id="date">
+                            <input type="number" name="" id="date">
                         </div>
                         <div class="divider"></div>
                         <div class="summery">
@@ -153,7 +183,7 @@
                             <p>Subtotal</p>
                             <h1>$29.98</h1>
                         </div>
-                        <a href="checkout-success.html">Buy Now</a>    
+                        <button disabled type="submit">Buy Now</button>   
                     </form>
                 </div>
             </section> 

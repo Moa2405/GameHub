@@ -84,7 +84,8 @@
   color: var(--secondery-color);
 }
 
-.payment-container {
+.payment-container,
+.shipping-container {
   /* height: 500px; */
   display: flex;
   flex-direction: column;
@@ -104,7 +105,7 @@
   margin-bottom: 1em;
 }
 
-form {
+.payment-form {
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
@@ -118,22 +119,28 @@ form {
 .payment-name-container,
 .card-no,
 .card-cvc,
-.expiry-date {
+.expiry-date,
+.shipping-container form ul li {
   margin: 0.5em 0em;
   font-size: 12px;
   display: flex;
   flex-direction: column;
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
 }
 
 .payment-name-container input,
 .card-no input,
 .card-cvc input,
-.expiry-date input {
-  border: 2px solid var(--primary-color);
+.expiry-date input,
+.shipping-container form ul li input {
+  /* border: 2px solid var(--primary-color); */
   border-radius: 4px;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   height: 35px;
+}
+
+.zip-code {
+  width: 90px;
 }
 
 .card-no-cvc {
@@ -184,18 +191,20 @@ form {
   font-size: 24px;
 }
 
-form a {
+button {
   color: black;
   text-decoration: none;
   background-color: var(--secondery-color);
   text-align: center;
   height: 45px;
-  width: 70%;
+  width: 300px;
   align-self: center;
   border-radius: 4px;
-  padding-top: 10px;
+  padding: 10px;
   font-weight: 500;
   font-size: 24px;
+  border: none;
+  margin: 10px 0px;
 }
 
 @media screen and (min-width: 768px) {
