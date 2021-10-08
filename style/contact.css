@@ -3,6 +3,25 @@
   grid-template-columns: 1fr;
 }
 
+.form-error {
+  display: none;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 2px;
+  background: rgba(255, 0, 0, 0.5);
+  text-align: center;
+  border: solid 1px rgb(255, 0, 0);
+}
+
+.submit-message {
+  background: rgba(0, 202, 0, 0.5);
+  padding: 1rem;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  display: none;
+}
+
 form {
   width: 350px;
   margin-top: 2em;
@@ -18,7 +37,7 @@ form textarea {
   background-color: #292929;
   border: 2px solid var(--primary-color);
   border-radius: 4px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   height: 40px;
   padding: 3px;
 }
@@ -43,19 +62,20 @@ form label {
 .form-message {
   display: flex;
   flex-direction: column;
+  margin: 10px 0px;
 }
 
 .form-message textarea {
   height: 150px;
 }
 
-form input[type="submit"] {
+button {
   font-weight: 500;
   font-size: 20px;
   color: black;
   border: none;
   border-radius: 4px;
-  background-color: var(--secondery-color);
+  background-color: var(--primary-color);
   height: 40px;
   width: 150px;
 }
