@@ -43,11 +43,6 @@ const zipCodeError = document.querySelector("#zip-code-error");
 
 const shipmentFormMessage = document.querySelector("#shipment-message");
 
-const updateCartAmount = () => document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
-
-updateCartAmount()
-
-
 
 const FormMessage = () => {
     if (checkLength(firstName.value, 2) && checkLength(lastName.value, 2) && validateAddress(address.value) && validateZipCode(zipCode.value)) {

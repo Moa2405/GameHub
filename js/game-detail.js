@@ -42,8 +42,6 @@ const getGameDetail = async () => {
 
 getGameDetail()
 
-const updateCartAmount = () => document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
-updateCartAmount()
 
 total = 0
 count = 0

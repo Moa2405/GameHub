@@ -11,11 +11,13 @@ const getGamsAPI = async () => {
 
         games.forEach(game => {
             gameContainer.innerHTML += `
-                                            <div class="game-card">                    
-                                                <img class="game-img" src="${game.background_image}" alt="">                                            
-                                                <a class="game-name-link"href="game-detail.html?id=${game.id}">${game.name}</a>
-                                                <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
-                                            </div>
+                                        <div class="game-card">
+                                                                
+                                            <img class="game-img" src="${game.background_image}" alt="">                                            
+                                            <a class="game-name-link"href="game-detail.html?id=${game.id}">${game.name}</a>
+                                            <p>$29.99</p>
+                                            <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
+                                        </div>
                                         `;           
         });
 
@@ -26,9 +28,6 @@ const getGamsAPI = async () => {
 } 
 
 getGamsAPI()
-
-const updateCartAmount = () => document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
-updateCartAmount()
 
 total = 0
 count = 0

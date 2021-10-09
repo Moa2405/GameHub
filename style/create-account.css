@@ -34,7 +34,7 @@
 }
 
 .register-email {
-  background-color: #474545;
+  background-color: black;
   border-radius: 4px;
   color: white;
   max-width: 350px;
@@ -76,12 +76,39 @@ form input[type="submit"] {
   width: 150px;
 }
 
+.show-password {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.checkbox {
+  width: 20px;
+  margin-bottom: 0px;
+}
+
 .create-account-icon {
   display: none;
   height: 225px;
   width: 250px;
   background-image: url("/images/create-account.png");
   background-size: cover;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  background-color: var(--secondery-color);
+  text-align: center;
+  height: 45px;
+  width: 300px;
+  align-self: center;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  border: none;
+  margin: 10px 0px;
 }
 
 @media screen and (min-width: 700px) {

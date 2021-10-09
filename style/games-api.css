@@ -6,6 +6,9 @@
 }
 
 .game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -32,6 +35,11 @@
   font-weight: 700;
   letter-spacing: 0;
   color: white;
+  margin: 10px;
+}
+
+p {
+  font-size: 28px;
   margin: 10px;
 }
 
