@@ -168,9 +168,37 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
+.site-navigator-github-slogan-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gamehub-slogan {
+  color: #03dac6;
+}
+
 label i {
   color: var(--primary-color);
   cursor: pointer;
+}
+
+.form-message {
+  background: rgba(0, 202, 0, 0.5);
+  padding: 1rem;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  display: none;
+}
+
+.form-error {
+  display: none;
+  color: white;
+  font-size: 15px;
+  margin-top: 2px;
+  background: red;
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {

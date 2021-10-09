@@ -15,12 +15,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/checkout.css">
-    <script src="https://kit.fontawesome.com/fb2425a635.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/checkout.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> 
-    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/fb2425a635.js" crossorigin="anonymous"></script>
+    <title>GameHub | Checkout</title>
 </head>
 <body>
     <header>
@@ -43,7 +43,7 @@
                     <li><a href="create-account.html">sell game</a></li>
                     <li><a href="contact.html">contact</a></li>
                     <li><a href="account-page.html">Login</a></li>
-                    <li><a href="checkout.html"><i class="fal fa-shopping-cart fa-2x"><span>2</span></i></a></li>
+                    <li><a href="checkout.html"><i class="fal fa-shopping-cart fa-2x"><span class="cart-count"></span></i></a></li>
                 </ul>
             </nav>
 
@@ -52,9 +52,10 @@
     <main>
         <div class="content-header" id="header"><h1>Cheackout</h1></div>
         <div class="progress-bar"></div>
-        
+            
             <section>
                 <p style="color: white; font-size: 30px; margin-bottom: 1em;">Your shopping cart<span><i class="fas fa-shopping-cart" style="color: #03dac6; margin-left: 8px;"></i></span></p>
+                
                 <div class="checkout-grid-container">
                     <div class="item-label"><p>Items</p></div>
                     <div class="price-label"><p>Price</p></div>
@@ -62,17 +63,16 @@
                     <div class="total-prise-label"><p>Total</p></div>
                     <div class="game-card">
                         <div class="game-img1"></div>
-                        <div class="game-info">
-                            <p>PingPong<br>(PlayBox)</p>
-                            <p>4K UHD</p>
-                            <p class="used">Used</p>
-                        </div>
+                      
+                        <p class="game-name1"></p>
+                    
                     </div>
                     <div class="game-price"><p>$29.99</p></div>
                     <div class="quantety-container">
                         <div class="quantety">
                             <p>1</p>
                         </div>
+                        
                         <div class="input">
                             <input type="button" value="+">
                             <input type="button" value="-">
@@ -81,11 +81,9 @@
                     <div class="total-game-price"><p>$29.99</p></div>
                     <div class="game-card">
                         <div class="game-img2"></div>
-                        <div class="game-info">
-                            <p>SuperDuper<br>(PlayBox)</p>
-                            <p>4K UHD</p>
-                            <p class="new">New</p>
-                        </div>
+                        
+                        <p class="game-name2"></p>
+                        
                     </div>
                     <div class="game-price"><p>$9.99</p></div>
                     <div class="quantety-container">
@@ -100,93 +98,105 @@
                     <div class="total-game-price"><p>$9.99</p></div>
                 </div>
             </section> 
-            <section>
-                <div class="shipping-container">
-                    <i class="far fa-shipping-fast fa-2x" style="color: #03dac6;"></i>
-                    <p style="color: white; font-size: 30px; margin-bottom: 1em;">Shipment Information</p>
-                    <form class="shipment-form">
-                        <ul>
-                            <li>
-                                <label for="first-name">First Name</label>
-                                <input type="text" name="" id="first-name">
-                            </li>
-                            <li>
-                                <label for="last-name">Last Name</label>
-                                <input type="text" name="" id="last-name">
-                            </li>
-                            <li>
-                                <label for="address">Address</label>
-                                <input type="text" name="" id="address">      
-                            </li>
-                            <li>
-                                <label for="zip-code">Zip-Code</label>
-                                <input class="zip-code" type="number" name="" id="zip-code">
-                            </li>
-                            
-                        </ul>
-                        <button disabled type="submit">Confirm shipment details</button>
-
-                    </form>
-                </div>
-            </section>
-            <section>
-                <div class="payment-container">
-                    <div class="payment-header">
-                        <p style="color: white; font-size: 30px; margin-bottom: 1em;">Payment</p>
+            <div class="shipment-payment-container">
+                <section>
+                    <div class="shipping-container">
+                        <i class="far fa-shipping-fast fa-2x" style="color: #03dac6;"></i>
+                        <p style="color: white; font-size: 30px; margin-bottom: 1em;">Shipment Information</p>
+                        <div class="form-message" id="shipment-message"></div>
+                        <form class="shipment-form">
+                            <ul>
+                                <li>
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name">
+                                    <p class="form-error" id="first-name-error">You Need to right a first name</p>
+                                </li>
+                                <li>
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name">
+                                    <p class="form-error" id="last-name-error">You Need to right a last name</p>
+                                </li>
+                                <li>
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address">      
+                                    <p class="form-error" id="address-error">Must right a valid address</p>
+                                </li>
+                                <li>
+                                    <label for="zip-code">Zip-Code</label>
+                                    <input class="zip-code" type="number" id="zip-code">
+                                    <p class="form-error" id="zip-code-error">You Need to right a valid zip code</p>
+                                </li>
+                            </ul>
+                            <button type="submit">Confirm shipment details</button>
+                        </form>
                     </div>
-                    <p>Choose a Payment Method</p>
-                    <div class="payment-options">
-                        <div class="visa-master">
-                            <input type="radio" name="visa-master" id="radio">
-                            <i class="fab fa-cc-visa fa-2x"></i>
-                            <i class="fab fa-cc-mastercard fa-2x"></i>
+                </section>
+    
+                <section>
+                    <div class="payment-container">
+                        <div class="payment-header">
+                            <p style="color: white; font-size: 30px; margin-bottom: 1em;">Payment</p>
                         </div>
-                        <div class="pay-pal">
-                            <input type="radio" name="pay-pal-radio" id="pay-pal-radio">
-                            <i class="fab fa-cc-paypal fa-2x"></i>
+                        <div class="form-message" id="payment-message"></div>
+                        <p>Choose a Payment Method</p>
+                        <div class="payment-options">
+                            <div class="visa-master">
+                                <input type="radio" name="visa-master" id="radio">
+                                <i class="fab fa-cc-visa fa-2x"></i>
+                                <i class="fab fa-cc-mastercard fa-2x"></i>
+                            </div>
+                            <div class="pay-pal">
+                                <input type="radio" name="pay-pal-radio" id="pay-pal-radio">
+                                <i class="fab fa-cc-paypal fa-2x"></i>
+                            </div>
                         </div>
+                        <form class="payment-form">
+                            <div class="payment-name-container">
+                                <label for="payment-name">Cardholders Name</label>
+                                <input type="text" id="payment-name">
+                                <p class="form-error" id="payment-name-error">Cardholders name not valid</p>
+                            </div>
+                            <div class="card-no-cvc">
+                                <div class="card-no">
+                                    <label for="card-no">Debit/Credit Card Number</label>
+                                    <input type="number"id="card-no">
+                                    <p class="form-error" id="card-no-error">Card number must be 16 numbers</p>
+                                </div>
+                                <div class="card-cvc">
+                                    <label for="card-cvc">Securety Code</label>
+                                    <input type="number" id="card-cvc">
+                                    <p class="form-error" id="card-cvc-error">CVC number must be 4 numbers</p>
+                                </div>
+                            </div>
+                            <div class="expiry-date">
+                                <label for="date">Expiry Date(mm/yy)</label>
+                                <input type="text" id="date">
+                                <p class="form-error" id="expiry-date-error">Card expiry date not valid</p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="summery">
+                                <div class="right-side">
+                                    <p>Itesm total</p>
+                                    <p>Shipping</p>
+                                    <p class="gamehub-credit">Gamehub Credit</p>
+                                </div>
+                                <div class="left-side">
+                                    <p>$39.98</p>
+                                    <p>Free</p>
+                                    <p>-$10.00</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="total-amount">
+                                <p>Subtotal</p>
+                                <h1>$29.98</h1>
+                            </div>
+                            <button type="submit">Buy Now</button>   
+                        </form>
                     </div>
-                    <form class="payment-form">
-                        <div class="payment-name-container">
-                            <label for="payment-name">Cardholders Name</label>
-                            <input type="text" name="" id="payment-name">
-                        </div>
-                        <div class="card-no-cvc">
-                            <div class="card-no">
-                                <label for="payment-name">Debit/Credit Card Number</label>
-                                <input type="number" name="" id="payment-name">
-                            </div>
-                            <div class="card-cvc">
-                                <label for="card-cvc">Securety Code</label>
-                                <input type="number" name="" id="card-cvc">
-                            </div>
-                        </div>
-                        <div class="expiry-date">
-                            <label for="date">Expiry Date</label>
-                            <input type="number" name="" id="date">
-                        </div>
-                        <div class="divider"></div>
-                        <div class="summery">
-                            <div class="right-side">
-                                <p>Itesm total</p>
-                                <p>Shipping</p>
-                                <p class="gamehub-credit">Gamehub Credit</p>
-                            </div>
-                            <div class="left-side">
-                                <p>$39.98</p>
-                                <p>Free</p>
-                                <p>-$10.00</p>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="total-amount">
-                            <p>Subtotal</p>
-                            <h1>$29.98</h1>
-                        </div>
-                        <button disabled type="submit">Buy Now</button>   
-                    </form>
-                </div>
-            </section> 
+                </section>
+            </div>
+             
         
     </main>
     <footer>
@@ -199,7 +209,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/addToCart.js"></script>
+    <script src="js/checkout.js"></script>
     
 </body>
 </html>

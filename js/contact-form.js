@@ -1,5 +1,5 @@
 const form = document.querySelector("#contact-form");
-const submitMessage = document.querySelector(".submit-message");
+const submitMessage = document.querySelector(".form-message");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
 const message = document.querySelector("#message");
