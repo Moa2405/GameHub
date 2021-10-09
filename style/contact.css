@@ -19,7 +19,6 @@ form textarea {
   color: var(--primary-text-color);
   border: 2px solid var(--primary-color);
   border-radius: 4px;
-  /* margin-bottom: 15px; */
   height: 40px;
   padding: 3px;
 }
@@ -51,21 +50,10 @@ form label {
   height: 150px;
 }
 
-button {
-  font-weight: 500;
-  font-size: 20px;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  background-color: var(--primary-color);
-  height: 40px;
-  width: 150px;
-}
-
 .contact-icon {
   display: none;
   align-self: center;
-  height: 300px;
+  height: 260px;
   background-image: url("/images/user-headset-solid2.png");
   background-size: cover;
 }

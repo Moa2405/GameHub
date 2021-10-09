@@ -21,14 +21,25 @@ const getGameDetail = async () => {
         hederHTML.innerHTML = gameDetail.name;
         gameDetalNav.innerHTML = gameDetail.name
         document.title = "GameHub | " + gameDetail.name;
+            
         
         gameDetailContainerHTML.innerHTML = `<div class="img-wrapper">
                                                 <img class="detail-img" src="${gameDetail.background_image}" alt="${gameDetail.name}">
                                              </div>
-                                            <div class="description-cta-container"> 
-                                                <div class="description">${gameDetail.description}</div>
-                                                <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
-                                            </div>`
+                                             <h1 class="game-name">${gameDetail.name}</h1>
+
+                                             <div class="game-detail-info-container">
+                                                <div class="scroll-box">
+                                                    <p class="description">${gameDetail.description_raw}</p>
+                                                </div>
+                                                
+                                                <div class="game-name-cart-button-container">
+                                                    <p class="price">$29.99<p>
+                                                    <button onclick="addItemToCart()">Add to cart</button>
+                                                </div>
+
+                                             </div>`
+                                            
                                         
                                             
                                             

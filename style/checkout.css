@@ -224,7 +224,7 @@ input[type="number"] {
   font-size: 24px;
 }
 
-button {
+/* button {
   color: black;
   text-decoration: none;
   background-color: var(--secondery-color);
@@ -238,7 +238,7 @@ button {
   font-size: 24px;
   border: none;
   margin: 10px 0px;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .checkout-grid-container {

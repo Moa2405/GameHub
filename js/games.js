@@ -12,9 +12,12 @@ const getGamsAPI = async () => {
         games.forEach(game => {
             gameContainer.innerHTML += `
                                         <div class="game-card">
-                                                                
-                                            <img class="game-img" src="${game.background_image}" alt="">                                            
-                                            <a class="game-name-link"href="game-detail.html?id=${game.id}">${game.name}</a>
+                                            <a class="img-wrapper-link"href="game-detail.html?id=${game.id}">                   
+                                                <img class="game-img" src="${game.background_image}" alt="">                                            
+                                            </a>
+                                            <a href="game-detail.html?id=${game.id}"> 
+                                                <p class="game-name-link">${game.name}</p>
+                                            </a>    
                                             <p>$29.99</p>
                                             <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
                                         </div>

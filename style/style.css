@@ -13,6 +13,22 @@
   font-family: "Roboto", sans-serif;
 }
 
+button {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  height: 38px;
+  padding: 9px;
+  margin: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00887a;
+}
+
 body {
   min-height: 100vh;
   display: grid;
@@ -48,7 +64,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 6px;
+  padding: 12px 23px;
 }
 
 footer {

@@ -18,29 +18,42 @@
   width: 100%;
 }
 
-.description-cta-container {
+.game-name-cart-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-detail-info-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.description {
-  max-width: 350px;
-  padding: 10px;
+.scroll-box {
+  display: block;
+  border: 0px solid red;
+  padding: 1rem;
+  margin-top: 5px;
+  width: 300px;
+  height: 300px;
+  overflow-y: scroll;
 }
 
-button {
-  background-color: var(--primary-color);
-  border-radius: 4px;
-  border: none;
-  font-size: 18px;
-  padding: 9px;
-  margin: 10px;
-  height: 40px;
+.price {
+  font-size: 28px;
+  margin: 1rem;
+}
+
+.description {
+  padding: 10px;
+  line-height: 22px;
 }
 
 @media screen and (min-width: 600px) {
-  .description-cta-container {
+  .game-detail-info-container {
     flex-direction: row;
+  }
+  .scroll-box {
+    width: 450px;
   }
 }

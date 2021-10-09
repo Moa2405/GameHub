@@ -95,7 +95,7 @@ form input[type="submit"] {
   background-size: cover;
 }
 
-button {
+/* button {
   color: black;
   text-decoration: none;
   background-color: var(--secondery-color);
@@ -109,7 +109,7 @@ button {
   font-size: 24px;
   border: none;
   margin: 10px 0px;
-}
+} */
 
 @media screen and (min-width: 700px) {
   .create-account-container {
