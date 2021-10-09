@@ -32,20 +32,13 @@ main {
 .content-header h1 {
   font-size: 30px;
   color: var(--primary-text-color);
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", serif;
 }
-
-/* header {
-  z-index: 10;
-  position: fixed;
-  top: 0px;
-} */
 
 header,
 footer {
   width: 100%;
   background-color: #000000;
-  /* border: var(--primary-color) solid 1px; */
   box-shadow: black 3px 3px 20px;
 }
 
@@ -53,7 +46,7 @@ footer {
   margin: auto;
   max-width: 1400px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 6px;
 }
@@ -127,14 +120,13 @@ footer h3 {
 }
 
 nav {
-  max-width: 400px;
   padding: 17.5px 17.5px;
   position: absolute;
   top: 49px;
   right: 0px;
   background-color: black;
   height: 50vh;
-  width: 50%;
+
   display: none;
   z-index: 1000;
 }
@@ -237,20 +229,6 @@ label i {
     padding-right: 25px;
     padding-left: 17px;
   }
-  .header-container label {
-    display: none;
-  }
-
-  nav {
-    padding: 0px;
-    position: static;
-    height: 27px;
-    z-index: 100;
-    display: block;
-  }
-  nav ul {
-    flex-direction: row;
-  }
 
   .search-button {
     background-color: var(--primary-color);
@@ -267,6 +245,22 @@ label i {
   }
 }
 
+@media screen and (min-width: 854px) {
+  nav {
+    padding: 0px;
+    position: static;
+    height: 27px;
+    z-index: 100;
+    display: block;
+    width: 50%;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  .header-container label {
+    display: none;
+  }
+}
 @media screen and (min-width: 900px) {
   /* .nav-search {
     margin-left: 30px;
