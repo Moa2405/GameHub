@@ -30,7 +30,7 @@ main {
 }
 
 .content-header h1 {
-  font-size: 34px;
+  font-size: 30px;
   color: var(--primary-text-color);
   font-family: "Roboto Slab", serif;
 }
@@ -168,14 +168,28 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
+.site-navigator {
+  display: flex;
+  margin: 5px;
+  display: none;
+}
+
+.site-navigator a,
+span {
+  color: white;
+  margin: 1px;
+}
+
 .site-navigator-github-slogan-wrapper {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .gamehub-slogan {
   color: #03dac6;
+  margin: 5px;
 }
 
 label i {
@@ -201,6 +215,14 @@ label i {
   text-align: center;
 }
 
+@media screen and (min-width: 550px) {
+  .site-navigator-github-slogan-wrapper {
+    flex-direction: row;
+  }
+  .site-navigator {
+    display: block;
+  }
+}
 @media screen and (min-width: 600px) {
   /* .cart {
     display: block;

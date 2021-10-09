@@ -18,6 +18,12 @@
   width: 100%;
 }
 
+.description-cta-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .description {
   max-width: 350px;
   padding: 10px;
@@ -30,4 +36,11 @@ button {
   font-size: 18px;
   padding: 9px;
   margin: 10px;
+  height: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .description-cta-container {
+    flex-direction: row;
+  }
 }

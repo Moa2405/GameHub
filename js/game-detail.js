@@ -1,5 +1,6 @@
 const gameDetailContainerHTML = document.querySelector(".game-detail-container");
 const hederHTML = document.querySelector(".detail-header");
+const gameDetalNav = document.querySelector(".game-detail-nav")
 const body = document.querySelector("body");
 
 
@@ -18,13 +19,16 @@ const getGameDetail = async () => {
         console.log(gameDetail) 
         
         hederHTML.innerHTML = gameDetail.name;
+        gameDetalNav.innerHTML = gameDetail.name
         document.title = "GameHub | " + gameDetail.name;
         
         gameDetailContainerHTML.innerHTML = `<div class="img-wrapper">
                                                 <img class="detail-img" src="${gameDetail.background_image}" alt="${gameDetail.name}">
                                              </div>
-                                            <div class="description">${gameDetail.description}</div>
-                                            <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>`
+                                            <div class="description-cta-container"> 
+                                                <div class="description">${gameDetail.description}</div>
+                                                <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
+                                            </div>`
                                         
                                             
                                             

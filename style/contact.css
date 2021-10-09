@@ -17,7 +17,6 @@ form textarea {
   padding: 0px;
   outline: none;
   color: var(--primary-text-color);
-  background-color: #292929;
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   /* margin-bottom: 15px; */
