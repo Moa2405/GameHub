@@ -50,6 +50,7 @@ button {
   font-size: 18px;
   padding: 9px;
   margin: 10px;
+  color: black;
 }
 
 @media screen and (min-width: 700px) {
