@@ -120,8 +120,6 @@ input[type="number"] {
   flex-direction: column;
   max-width: 350px;
   background-color: black;
-
-  /* border: 2px solid var(--primary-color); */
   border-radius: 4px;
   padding: 1em;
   color: var(--primary-text-color);
