@@ -1,4 +1,6 @@
 const gameContainer = document.querySelector(".game-container");
+const spinner = document.querySelector(".spinner");
+
 
 const getGamsAPI = async () => {
     try {
@@ -8,7 +10,7 @@ const getGamsAPI = async () => {
 
         const games = respons.results;
         console.log(games)
-
+        spinner.style.display = "none"
         games.forEach(game => {
             gameContainer.innerHTML += `
                                         <div class="game-card">
@@ -26,6 +28,8 @@ const getGamsAPI = async () => {
 
     }
     catch(err) {
+        spinner.style.display = "none"
+        gameContainer.innerHTML += `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`
         console.log(err)
     }
 } 
@@ -34,7 +38,8 @@ getGamsAPI()
 
 total = 0
 count = 0
-const addItemToCart = () => {
+const addItemToCart = (event) => {
+    console.log()
     count ++
     total += 29.99
     localStorage.setItem("cart-count", count)

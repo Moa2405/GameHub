@@ -71,7 +71,7 @@
         <div class="progress-bar"></div>
             
             <section>
-                <p style="color: white; font-size: 30px; margin-bottom: 1em;">Your shopping cart<span><i class="fas fa-shopping-cart" style="color: #03dac6; margin-left: 8px;"></i></span></p>
+                <p style="color: white; font-size: 30px; margin-bottom: 1em; margin-left: 1rem;">Your shopping cart<span><i class="fas fa-shopping-cart" style="color: #03dac6; margin-left: 8px;"></i></span></p>
                 
                 <div class="checkout-grid-container">
                     <div class="item-label"><p>Items</p></div>
@@ -79,7 +79,9 @@
                     <div class="quantety-label"><p>Quant</p></div>
                     <div class="total-prise-label"><p>Total</p></div>
                     <div class="game-card">
-                        <div class="game-img1"></div>
+                        <div class="game-img1">
+                            <div class="mini-spinner"></div>
+                        </div>
                       
                         <p class="game-name1"></p>
                     
@@ -97,7 +99,9 @@
                     </div>
                     <div class="total-game-price"><p>$29.99</p></div>
                     <div class="game-card">
-                        <div class="game-img2"></div>
+                        <div class="game-img2">
+                            <div class="mini-spinner"></div>
+                        </div>
                         
                         <p class="game-name2"></p>
                         
@@ -141,7 +145,7 @@
                                 <li>
                                     <label for="zip-code">Zip-Code</label>
                                     <input class="zip-code" type="number" id="zip-code">
-                                    <p class="form-error" id="zip-code-error">You Need to right a valid zip code</p>
+                                    <p class="form-error" id="zip-code-error">You Need to right a valid zip code(4 numbers)</p>
                                 </li>
                             </ul>
                             <button type="submit">Confirm shipment details</button>
@@ -171,7 +175,7 @@
                             <div class="payment-name-container">
                                 <label for="payment-name">Cardholders Name</label>
                                 <input type="text" id="payment-name">
-                                <p class="form-error" id="payment-name-error">Cardholders name not valid</p>
+                                <p class="form-error" id="payment-name-error">Cardholders name not valid<br>(minimum first name last and name)</p>
                             </div>
                             <div class="card-no-cvc">
                                 <div class="card-no">
@@ -208,7 +212,8 @@
                                 <p>Subtotal</p>
                                 <h1>$29.98</h1>
                             </div>
-                            <button type="submit">Buy Now</button>   
+
+                            <button disabled class="payment-button" type="submit">Buy Now</button>   
                         </form>
                     </div>
                 </section>

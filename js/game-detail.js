@@ -2,6 +2,8 @@ const gameDetailContainerHTML = document.querySelector(".game-detail-container")
 const hederHTML = document.querySelector(".detail-header");
 const gameDetalNav = document.querySelector(".game-detail-nav")
 const body = document.querySelector("body");
+const spinner = document.querySelector(".spinner");
+
 
 
 const params = new URLSearchParams(window.location.search)
@@ -21,6 +23,7 @@ const getGameDetail = async () => {
         hederHTML.innerHTML = gameDetail.name;
         gameDetalNav.innerHTML = gameDetail.name
         document.title = "GameHub | " + gameDetail.name;
+        spinner.style.display = "none"
             
         
         gameDetailContainerHTML.innerHTML = `<div class="img-wrapper">
@@ -38,14 +41,12 @@ const getGameDetail = async () => {
                                                     <button onclick="addItemToCart()">Add to cart</button>
                                                 </div>
 
-                                             </div>`
-                                            
-                                        
-                                            
-                                            
-        
+                                             </div>`  
     }
+
     catch (err) {
+        spinner.style.display = "none"
+        gameDetailContainerHTML.innerHTML = `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`
         console.log(err)
     }
     

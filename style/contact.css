@@ -16,7 +16,7 @@ form textarea {
   font-size: 16px;
   padding: 0px;
   outline: none;
-  color: var(--primary-text-color);
+  /* color: var(--primary-text-color); */
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   height: 40px;
