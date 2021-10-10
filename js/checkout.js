@@ -1,28 +1,27 @@
-const gameImgOne = document.querySelector(".game-img1")
-const gameImgTwo = document.querySelector(".game-img2")
-const gameNameOne = document.querySelector(".game-name1")
-const gameNameTwo = document.querySelector(".game-name2")
-const miniSpinner = document.querySelector(".mini-spinner")
+const gameImgOne = document.querySelector(".game-img1");
+const gameImgTwo = document.querySelector(".game-img2");
+const gameNameOne = document.querySelector(".game-name1");
+const gameNameTwo = document.querySelector(".game-name2");
+const miniSpinner = document.querySelector(".mini-spinner");
 
 
 const getGamsAPI = async () => {
     try {
-        const fetchGames = await fetch("https://api.rawg.io/api/games?key=00789cedfec649d583337ea2538e5185")
+        const fetchGames = await fetch("https://api.rawg.io/api/games?key=00789cedfec649d583337ea2538e5185");
 
-        const respons = await fetchGames.json()
+        const respons = await fetchGames.json();
 
         const games = respons.results;
-        console.log(games)
-        miniSpinner.style.display = "none"
-        gameImgOne.innerHTML = `<img src="${games[0].background_image}" alt="${games[0].name}">`
-        gameImgTwo.innerHTML = `<img src="${games[1].background_image}" alt="${games[1].name}">`
-        gameNameOne.innerHTML = `<p>${games[0].name}</p>`
-        gameNameTwo.innerHTML = `<p>${games[1].name}</p>`
+        miniSpinner.style.display = "none";
+        gameImgOne.innerHTML = `<img src="${games[0].background_image}" alt="${games[0].name}">`;
+        gameImgTwo.innerHTML = `<img src="${games[1].background_image}" alt="${games[1].name}">`;
+        gameNameOne.innerHTML = `<p>${games[0].name}</p>`;
+        gameNameTwo.innerHTML = `<p>${games[1].name}</p>`;
 
     }
     catch(err) {
-        gameImgOne.innerHTML = `<p>Sorry, it seems we are having some server issues.<br>We are working to solve the problem</p>`
-        gameImgTwo.innerHTML = `<p>Sorry, it seems we are having some server issues.<br>We are working to solve the problem</p>`
+        gameImgOne.innerHTML = `<p>Sorry, it seems we are having some server issues.<br>We are working to solve the problem</p>`;
+        gameImgTwo.innerHTML = `<p>Sorry, it seems we are having some server issues.<br>We are working to solve the problem</p>`;
         console.log(err)
     }
 } 
@@ -51,16 +50,16 @@ const paymentButton = document.querySelector(".payment-button");
 
 const FormMessage = () => {
     if (checkLength(firstName.value, 2) && checkLength(lastName.value, 2) && validateAddress(address.value) && validateZipCode(zipCode.value)) {
-        shipmentFormMessage.style.display = "block"
-        shipmentFormMessage.style.backgroundColor = "green"
-        shipmentFormMessage.innerHTML = `<p>Shipment information successfully submitet<p>`
-        paymentButton.style.backgroundColor = "#03dac6"
+        shipmentFormMessage.style.display = "block";
+        shipmentFormMessage.style.backgroundColor = "green";
+        shipmentFormMessage.innerHTML = `<p>Shipment information successfully submitet<p>`;
+        paymentButton.style.backgroundColor = "#03dac6";
         paymentButton.disabled = false;
     }else {
-        shipmentFormMessage.style.display = "block"
-        shipmentFormMessage.style.backgroundColor = "red"
-        shipmentFormMessage.innerHTML = `<p>Shipment information not valid<p>`
-        paymentButton.style.backgroundColor = "gray"
+        shipmentFormMessage.style.display = "block";
+        shipmentFormMessage.style.backgroundColor = "red";
+        shipmentFormMessage.innerHTML = `<p>Shipment information not valid<p>`;
+        paymentButton.style.backgroundColor = "gray";
         paymentButton.disabled = true;
 
     }
@@ -117,21 +116,21 @@ shipmentForm.addEventListener("submit", (event) => {
 })
 
 
-const paymentForm = document.querySelector(".payment-form")
+const paymentForm = document.querySelector(".payment-form");
 
-const cardHolderName = document.querySelector("#payment-name")
-const cardHolderNameError = document.querySelector("#payment-name-error")
+const cardHolderName = document.querySelector("#payment-name");
+const cardHolderNameError = document.querySelector("#payment-name-error");
 
-const cardNumber = document.querySelector("#card-no")
-const cardNumbererror = document.querySelector("#card-no-error")
+const cardNumber = document.querySelector("#card-no");
+const cardNumbererror = document.querySelector("#card-no-error");
 
-const cardCvc = document.querySelector("#card-cvc")
-const cardCvcError = document.querySelector("#card-cvc-error")
+const cardCvc = document.querySelector("#card-cvc");
+const cardCvcError = document.querySelector("#card-cvc-error");
 
-const expiryDate = document.querySelector("#date")
-const expiryDateError = document.querySelector("#expiry-date-error")
+const expiryDate = document.querySelector("#date");
+const expiryDateError = document.querySelector("#expiry-date-error");
 
-const paymentFormMessage = document.querySelector("#payment-message")
+const paymentFormMessage = document.querySelector("#payment-message");
 
 
 const validateCardNumber = (cardNo) => {
@@ -154,11 +153,11 @@ const validateExpiryDate = (expiryDate) => {
 
 const PaymentMessage = () => {
     if (checkLength(cardHolderName.value, 4) && validateCardNumber(cardNumber.value) && validateCvcNumber(cardCvc.value) && validateExpiryDate(expiryDate.value)) {
-        document.location = "/checkout-success.html"
+        document.location = "/checkout-success.html";
     }else {
-        paymentFormMessage.style.display = "block"
-        paymentFormMessage.style.backgroundColor = "red"
-        paymentFormMessage.innerHTML = `<p>Shipment information not valid<p>`
+        paymentFormMessage.style.display = "block";
+        paymentFormMessage.style.backgroundColor = "red";
+        paymentFormMessage.innerHTML = `<p>Shipment information not valid<p>`;
 
     }
 }

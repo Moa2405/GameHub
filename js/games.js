@@ -9,7 +9,6 @@ const getGamsAPI = async () => {
         const respons = await fetchGames.json()
 
         const games = respons.results;
-        console.log(games)
         spinner.style.display = "none"
         games.forEach(game => {
             gameContainer.innerHTML += `
@@ -28,20 +27,17 @@ const getGamsAPI = async () => {
 
     }
     catch(err) {
-        spinner.style.display = "none"
-        gameContainer.innerHTML += `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`
+        spinner.style.display = "none";
+        gameContainer.innerHTML += `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`;
         console.log(err)
     }
 } 
 
 getGamsAPI()
 
-total = 0
-count = 0
+total = 0;
+count = 0;
 const addItemToCart = (event) => {
-    document.querySelectorAll("button").forEach((button) => {
-        button.style.backgroundColor = "gray"
-    })
     console.log();
     count ++;
     total += 29.99;

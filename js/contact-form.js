@@ -32,6 +32,7 @@ const displayMessage = () => {
         submitMessage.style.display = "block";
         submitMessage.style.backgroundColor = "green";
         submitMessage.innerHTML = `<p>Your message was successfuly submitted</p>`;
+        form.reset();
     }
     else {
         submitMessage.style.display = "block";
@@ -40,24 +41,6 @@ const displayMessage = () => {
         submitMessage.innerHTML = `<p>Your message was not submitted</p>`;
     }
 }
-
-
-// email.addEventListener("blur", () => {
-//     if (validateEmail(email.value)) {
-//         emailError.style.display = "none";
-//     }else {
-//         emailError.style.display = "block";
-//     }
-// })
-
-// message.addEventListener("blur", () => {
-
-//     if (checkLength(message.value, 10)) {
-//         messageError.style.display = "none";
-//     }else {
-//         messageError.style.display = "block";
-//     }
-// })
 
 
 form.addEventListener("submit", (event) => {
