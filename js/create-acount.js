@@ -51,7 +51,7 @@ form.addEventListener("submit", (event) => {
         emailError.style.display = "block";
     }
 
-    if (checkLength(password.value, 8)) {
+    if (checkLength(password.value, 10)) {
         messageError.style.display = "none";
     }else {
         messageError.style.display = "block";

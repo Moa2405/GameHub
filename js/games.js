@@ -39,12 +39,15 @@ getGamsAPI()
 total = 0
 count = 0
 const addItemToCart = (event) => {
-    console.log()
-    count ++
-    total += 29.99
-    localStorage.setItem("cart-count", count)
-    localStorage.setItem("total-amount", total)
-    document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count")
+    document.querySelectorAll("button").forEach((button) => {
+        button.style.backgroundColor = "gray"
+    })
+    console.log();
+    count ++;
+    total += 29.99;
+    localStorage.setItem("cart-count", count);
+    localStorage.setItem("total-amount", total);
+    document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
 }
 
 
