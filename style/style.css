@@ -112,7 +112,7 @@ footer h3 {
 
 #input-search {
   height: 27px;
-  width: 66px;
+  width: 90px;
   border-radius: 4px 0px 0px 4px;
   outline: none;
   border: none;
@@ -121,13 +121,14 @@ footer h3 {
 }
 
 .search-button {
+  margin: 0;
   padding-left: 5px;
   padding-top: 2px;
   width: 33px;
   border-radius: 0px 4px 4px 0px;
   height: 27px;
   border: none;
-  background-color: white;
+  background-color: var(--primary-color);
 }
 
 .search-button i {
