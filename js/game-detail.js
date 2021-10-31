@@ -12,9 +12,8 @@ const gameId = params.get("id");
 
 const getGameDetail = async () => {
     try {
-        const fetchGameDetail = await fetch("https://utviklermoa.no/gamehub/wp-json/wc/store/products/" + gameId )
-        const gameDetail = await fetchGameDetail.json()
-        console.log(gameDetail)
+        const fetchGameDetail = await fetch("https://utviklermoa.no/gamehub/wp-json/wc/store/products/" + gameId );
+        const gameDetail = await fetchGameDetail.json();
         
         hederHTML.innerHTML = gameDetail.name;
 
