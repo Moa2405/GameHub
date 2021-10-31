@@ -5,6 +5,7 @@ const perPage = document.querySelector("#per-page");
 const priceFilterBnt = document.querySelector(".price-filter-bnt");
 const priceFilterIcon = document.querySelector("#price-filter-icon");
 const pagesNavigaterContainer = document.querySelector(".pages-container");
+const sortByNameBnt = document.querySelector(".name-filter-bnt");
 
 const inputSearch = document.querySelector("#input-search");
 
@@ -50,7 +51,7 @@ getGamsAPI(baseUrl);
 
 priceFilterBnt.onclick = () => {
     let priceFilterUrl = "&orderby=price";
-    let ascOrDescUrl
+    let ascOrDescUrl;
 
     if (priceFilterIcon.classList.contains("fa-angle-down")) {
         priceFilterIcon.classList.remove("fa-angle-down")
@@ -64,9 +65,32 @@ priceFilterBnt.onclick = () => {
     }
     gameContainer.innerHTML = ""
 
-    getGamsAPI(baseUrl + ascOrDescUrl + priceFilterUrl);
-    
+    getGamsAPI(baseUrl + ascOrDescUrl + priceFilterUrl); 
 }
+
+
+sortByNameBnt.onclick = () => {
+    let sortByTitle = "&orderby=title";
+    let ascOrDescUrl;
+    if (sortByNameBnt.classList.contains("asc")) {
+        sortByNameBnt.classList.remove("asc")
+        sortByNameBnt.classList.add("desc")
+        ascOrDescUrl = "?order=asc"
+    }
+    else {
+        sortByNameBnt.classList.remove("desc")
+        sortByNameBnt.classList.add("asc")
+        ascOrDescUrl = "?order=desc"
+    }
+    gameContainer.innerHTML = ""
+
+    getGamsAPI(baseUrl + ascOrDescUrl + sortByTitle);
+
+}
+
+
+
+
 
 categories.onchange = (event) => {
     let categoryUrl;

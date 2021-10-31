@@ -24,11 +24,20 @@ select:hover {
   background-color: #00887a;
 }
 
-.price-filter-bnt {
+.price-filter-bnt,
+.name-filter-bnt {
   height: 24px;
   margin: 1rem;
   padding: 0;
-  width: 80px;
+  width: 126px;
+}
+
+.asc::after {
+  content: " Aa-Zz";
+}
+
+.desc::after {
+  content: " Zz-Aa";
 }
 
 .game-card {
