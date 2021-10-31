@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Hotjar Tracking Code for https://ecstatic-keller-bc6a41.netlify.app/index.html -->
-    <!-- <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:2634016,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,10 +20,10 @@
             <a class="nav-logo" href="index.html"><img class="logo-img" src="images/GameHub_Logo.png" alt="Logo-Home"></a>
 
             <div class="nav-search">
-                <input type="text" placeholder="Search" name="search" id="input-search">
-                <a href="search-resullt.html" class="search-button">
+                <input type="text" placeholder="Search" id="input-search">
+                <button class="search-button">
                     <i class="fas fa-search fa-1x"></i>
-                </a>
+                </button>
             </div>
 
             <input type="checkbox" id="hamburger-menu" />
@@ -52,19 +41,19 @@
 
         </div>
 
-        <div class="site-navigator-github-slogan-wrapper">
-            <div class="github-slogan">
-                <h3 class="gamehub-slogan">THE UNIVERS OF GAMES</h3>
-            </div>
-        </div>
-
     </header>
     <main>
+
         <section class="home1-section">
+
+            <div class="gamehub-slogan-wrapper">
+                <h3 class="gamehub-slogan">THE UNIVERS OF GAMES</h3>
+            </div>
+
             <div class="home1-content-container">
                 <div class="header-one">
-                    <h1 class="main-header">The place to <span class="green-buy">BUY</span> games<br/>And <span class="purple-sell">SELL</span> your used games</h1>
-                    <h2 class="sub-header-to">Support your fellow gamer by buying used games,<br/> or buy new games and earn <span class="green-points">GamedHub Points</span> to<br/> get 10$ credit</h2>
+                    <h1 class="main-header">The place to BUY games<br/>And SELL your used games</h1>
+                    <h2 class="sub-header-to">Support your fellow gamer by buying used games,<br/> or buy new games and earn GamedHub Points to<br/> get 10$ credit</h2>
                 </div>
                 <div class="cta-boxes">
                     <div class="cta-box-green">
@@ -103,6 +92,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/search-games.js"></script>
     <script src="js/update-game-count.js"></script>
 </body>
 </html>

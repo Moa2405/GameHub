@@ -1,29 +1,38 @@
 const gameContainer = document.querySelector(".game-container");
 const spinner = document.querySelector(".spinner");
+const categories = document.querySelector("#categories");
+const perPage = document.querySelector("#per-page");
+const priceFilterBnt = document.querySelector(".price-filter-bnt");
+const priceFilterIcon = document.querySelector("#price-filter-icon");
 
+const inputSearch = document.querySelector("#input-search");
 
-const getGamsAPI = async () => {
+const baseUrl = "https://utviklermoa.no/gamehub/wp-json/wc/store/products"
+
+const getGamsAPI = async (url) => {
     try {
-        const fetchGames = await fetch("https://api.rawg.io/api/games?key=00789cedfec649d583337ea2538e5185")
+        const fetchGames = await fetch(url)
 
-        const respons = await fetchGames.json()
+        const games = await fetchGames.json()
 
-        const games = respons.results;
+        console.log(games);
+        
         spinner.style.display = "none"
+
         games.forEach(game => {
             gameContainer.innerHTML += `
                                         <div class="game-card">
                                             <a class="img-wrapper-link"href="game-detail.html?id=${game.id}">                   
-                                                <img class="game-img" src="${game.background_image}" alt="">                                            
+                                                <img class="game-img" src="${game.images[0].src}" alt="${game.name}">                                            
                                             </a>
                                             <a href="game-detail.html?id=${game.id}"> 
                                                 <p class="game-name-link">${game.name}</p>
-                                            </a>    
-                                            <p>$29.99</p>
+                                            </a>
+                                            <p>${game.prices.price},-</p>
                                             <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
                                         </div>
                                         `;           
-        });
+        })
 
     }
     catch(err) {
@@ -32,17 +41,58 @@ const getGamsAPI = async () => {
         console.log(err)
     }
 } 
+getGamsAPI(baseUrl);
 
-getGamsAPI()
+priceFilterBnt.onclick = () => {
+    let priceFilterUrl = "&orderby=price";
+    let ascOrDescUrl
 
-total = 0;
+    if (priceFilterIcon.classList.contains("fa-angle-down")) {
+        priceFilterIcon.classList.remove("fa-angle-down")
+        priceFilterIcon.classList.add("fa-angle-up")
+        ascOrDescUrl = "?order=asc"
+    }
+    else {
+        priceFilterIcon.classList.remove("fa-angle-up")
+        priceFilterIcon.classList.add("fa-angle-down")
+        ascOrDescUrl = "?order=desc"
+    }
+    gameContainer.innerHTML = ""
+
+    getGamsAPI(baseUrl + ascOrDescUrl + priceFilterUrl);
+    
+}
+
+categories.onchange = (event) => {
+    let categoryUrl;
+    if (categories.value === "featured") {
+        categoryUrl = "?featured=true";
+    }
+    else {
+        const catagoryChosen = event.target.value;
+        categoryUrl = `?category=${catagoryChosen}`;
+    }
+    
+    gameContainer.innerHTML = "";
+    
+    getGamsAPI(baseUrl + categoryUrl);
+
+    return categoryUrl
+}
+
+
+perPage.onchange = (event) => {
+    let newUrl = `${baseUrl}?per_page=${event.target.value}`;
+    gameContainer.innerHTML = "";
+    getGamsAPI(newUrl);
+}
+
+
 count = 0;
 const addItemToCart = (event) => {
     console.log();
     count ++;
-    total += 29.99;
     localStorage.setItem("cart-count", count);
-    localStorage.setItem("total-amount", total);
     document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
 }
 

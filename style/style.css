@@ -46,7 +46,7 @@ main {
 }
 
 .content-header {
-  margin: 2em;
+  margin: 1rem;
 }
 
 .content-header h1 {
@@ -186,22 +186,20 @@ nav ul li a:hover {
   display: none;
 }
 
-.site-navigator a,
-span {
-  color: white;
-  margin: 1px;
+.site-navigator > * {
+  color: rgb(179, 179, 179);
+  margin: 0.5em;
 }
 
-.site-navigator-github-slogan-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.gamehub-slogan-wrapper {
+  text-align: center;
 }
 
 .gamehub-slogan {
-  color: #03dac6;
+  color: #ffffff;
   margin: 5px;
+  margin: 1rem;
+  font-size: 2em;
 }
 
 label i {

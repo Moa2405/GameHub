@@ -10,11 +10,11 @@ const params = new URLSearchParams(window.location.search);
 const gameId = params.get("id");
 
 
-
 const getGameDetail = async () => {
     try {
-        const fetchGameDetail = await fetch("https://api.rawg.io/api/games/" + gameId + "?key=00789cedfec649d583337ea2538e5185")
+        const fetchGameDetail = await fetch("https://utviklermoa.no/gamehub/wp-json/wc/store/products/" + gameId )
         const gameDetail = await fetchGameDetail.json()
+        console.log(gameDetail)
         
         hederHTML.innerHTML = gameDetail.name;
 
@@ -26,17 +26,17 @@ const getGameDetail = async () => {
             
         
         gameDetailContainerHTML.innerHTML = `<div class="img-wrapper">
-                                                <img class="detail-img" src="${gameDetail.background_image}" alt="${gameDetail.name}">
+                                                <img class="detail-img" src="${gameDetail.images[0].src}" alt="${gameDetail.name}">
                                              </div>
                                              <h1 class="game-name">${gameDetail.name}</h1>
 
                                              <div class="game-detail-info-container">
                                                 <div class="scroll-box">
-                                                    <p class="description">${gameDetail.description_raw}</p>
+                                                    <p class="description">${gameDetail.description}</p>
                                                 </div>
                                                 
                                                 <div class="game-name-cart-button-container">
-                                                    <p class="price">$29.99<p>
+                                                    <p class="price">${gameDetail.prices.price},-<p>
                                                     <button onclick="addItemToCart()">Add to cart</button>
                                                 </div>
 

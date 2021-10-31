@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Hotjar Tracking Code for https://ecstatic-keller-bc6a41.netlify.app/index.html -->
-    <!-- <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:2634016,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,9 +20,9 @@
 
             <div class="nav-search">
                 <input type="text" placeholder="Search" name="search" id="input-search">
-                <a href="search-resullt.html" class="search-button">
+                <button class="search-button">
                     <i class="fas fa-search fa-1x"></i>
-                </a>
+                </button>
             </div>
 
             <input type="checkbox" id="hamburger-menu" />
@@ -51,25 +40,23 @@
 
         </div>
 
-        <div class="site-navigator-github-slogan-wrapper">
-            <div class="site-navigator">
-                <a href="index.html">Home</a>
-                <span> > </span>
-                <a href="games.html">Games</a>
-                <span> > </span>
-                <a href="games.html">Cheackout</a>
-                <span> > </span>
-                <a href="games.html">Cheackout Success</a>
-                <a class="game-detail-nav" href="games.html"></a>
-
-            </div>
-            <div class="github-slogan">
-                <h3 class="gamehub-slogan">THE UNIVERS OF GAMES</h3>
-            </div>
-        </div>
-
     </header>
     <main>
+
+        <div class="site-navigator">
+            <a href="index.html">Home</a>
+            <span> > </span>
+            <a href="games.html">Games</a>
+            <span> > </span>
+            <a href="checkout.html">Cheackout</a>
+            <span> > </span>
+            <a href="#">Cheackout Success</a>
+        </div>
+       
+        <div class="gamehub-slogan-wrapper">
+            <h3 class="gamehub-slogan">THE UNIVERS OF GAMES</h3>
+        </div>
+
         <div class="content-header">
             <h1>Checkout Success</h1>
         </div>
@@ -141,5 +128,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/search-games.js"></script>
+
 </body>
 </html>

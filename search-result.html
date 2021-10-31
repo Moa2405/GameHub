@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/contact.css">
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/games-api.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/fb2425a635.js" crossorigin="anonymous"></script>
-    <title>GameHub | Contact</title>
+    <title>GameHub | Search result</title>
 </head>
 <body>
     <header>
@@ -41,56 +41,30 @@
         </div>
 
     </header>
+    
     <main>
-
+        
         <div class="site-navigator">
             <a href="index.html">Home</a>
             <span> > </span>
-            <a href="games.html">Contact</a>
+            <a href="games.html">Search result</a>
         </div>
-       
+        
         <div class="gamehub-slogan-wrapper">
             <h3 class="gamehub-slogan">THE UNIVERS OF GAMES</h3>
         </div>
 
-        <section>
-            <div class="content-header"><h1>Get In Touch</h1></div>
-            <div class="form-message"></div>
-            <div class="contact-container">
-                <form id="contact-form">
+        <div class="content-header">
+            
+        </div>
 
-                    <div class="form-last-first-name">
+        
+        <div class="game-container">
+            <div class="spinner"></div>
+        </div>
+       
+        
 
-                        <div class="form-first-name">
-                            <label for="first-name">First Name</label>
-                            <input type="text" id="first-name">
-                        </div>
-
-                        <div class="form-last-name">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name">
-                        </div>
-
-                    </div>
-
-                    <div class="form-email">
-                        <label for="email">Your E-Mail Adress*</label>
-                        <input type="email" id="email">
-                        <div class="form-error" id="email-error">Must be a valid email</div>
-                    </div>
-
-                    <div class="contact-message">
-                        <label for="message">Your Message*</label>
-                        <textarea id="message" style="height:150px"></textarea>
-                        <div class="form-error" id="message-error">Minimum 10 characters</div>
-                    </div>
-
-                    <button type="submit">Submitt</button>
-
-                </form>
-                <div class="contact-icon"></div>
-            </div>
-        </section>  
     </main>
     <footer>
         <div class="footer-container">
@@ -103,9 +77,8 @@
         </div>
     </footer>
 
-    
     <script src="js/search-games.js"></script>
-    <script src="js/update-game-count.js"></script>    
-    <script src="js/contact-form.js"></script>
+    <script src="js/search-result.js"></script>
+    <script src="js/update-game-count.js"></script>
 </body>
 </html>
