@@ -7,6 +7,10 @@
 }
 
 .filter-container {
+  display: none;
+}
+
+.filter-wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -29,7 +33,7 @@ select:hover {
   height: 24px;
   margin: 1rem;
   padding: 0;
-  width: 126px;
+  width: 190px;
 }
 
 .asc::after {
@@ -116,14 +120,20 @@ button:hover {
   background-color: #00887a;
 } */
 
-@media screen and (min-width: 600px) {
-  .filter-container {
-    flex-direction: row;
-  }
-}
 @media screen and (min-width: 700px) {
   .game-container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 850px) {
+  .show-filter-options-btn {
+    display: none;
+  }
+  .filter-container {
+    display: block;
+  }
+  .filter-wrapper {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1000px) {

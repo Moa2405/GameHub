@@ -58,35 +58,44 @@
             <h1>Games</h1>
         </div>
 
+   
+        <button class="show-filter-options-btn">Filter <i class="fal fa-sliders-h"></i></button>
+       
+
         <div class="filter-container">
 
-            <div class="catagory-wrapper">
-                <select name="categories" id="categories">
-                    <option value="">Filter bay catagort</option>                    
-                    <option value="featured">Featured</option>                    
-                    <option value="16">Action</option>
-                    <option value="18">Shooter</option>
-                    <option value="19">Adventure</option>
-                    <option value="20">Puzzle</option>
-                    <option value="21">Role-playing</option>
-                </select>
-            </div>
+            <div class="filter-wrapper">
 
-            <div class="per-page-wrapper">
-                <select name="per-page" id="per-page">
-                    <option value="20">Games pre page</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                </select>
+                <div class="catagory-wrapper">
+                    <select name="categories" id="categories">
+                        <option value="">Filter bay catagort</option>                    
+                        <option value="featured">Featured</option>                    
+                        <option value="16">Action</option>
+                        <option value="18">Shooter</option>
+                        <option value="19">Adventure</option>
+                        <option value="20">Puzzle</option>
+                        <option value="21">Role-playing</option>
+                    </select>
+                </div>
+    
+                <div class="per-page-wrapper">
+                    <select name="per-page" id="per-page">
+                        <option value="20">Games pre page</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <button class="price-filter-bnt">Sort by price  <i class="fas fa-angle-down" id="price-filter-icon"></i></button>
+                </div>
+                <div>
+                    <button class="name-filter-bnt asc">Sort by name</button>
+                </div> 
+                
             </div>
-
-            <div class="price-filter-wrapper">
-                <button class="price-filter-bnt">Sort by price  <i class="fas fa-angle-down" id="price-filter-icon"></i></button>
-                <button class="name-filter-bnt asc">Sort by name</button>
-            </div>
-
         </div>
         
         <div class="game-container">
