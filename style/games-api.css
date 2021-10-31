@@ -45,8 +45,13 @@ select:hover {
   color: white;
 }
 
-.short-description {
-  font-size: 10px;
+.short-description-wrapper a p {
+  font-size: 13px;
+  color: white;
+}
+
+.short-description-wrapper a p:hover {
+  font-size: 20px;
 }
 
 .img-wrapper-link {
