@@ -20,6 +20,7 @@ select {
 
 select:hover {
   background-color: #00887a;
+  color: black;
 }
 
 .price-filter-bnt {

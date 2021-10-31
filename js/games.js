@@ -4,6 +4,7 @@ const categories = document.querySelector("#categories");
 const perPage = document.querySelector("#per-page");
 const priceFilterBnt = document.querySelector(".price-filter-bnt");
 const priceFilterIcon = document.querySelector("#price-filter-icon");
+const pagesNavigaterContainer = document.querySelector(".pages-container");
 
 const inputSearch = document.querySelector("#input-search");
 
@@ -11,13 +12,16 @@ const baseUrl = "https://utviklermoa.no/gamehub/wp-json/wc/store/products"
 
 const getGamsAPI = async (url) => {
     try {
-        const fetchGames = await fetch(url)
+        const fetchGames = await fetch(url);
 
-        const games = await fetchGames.json()
+        const games = await fetchGames.json();
 
-        console.log(games);
+        // console.log(games);
         
-        spinner.style.display = "none"
+        spinner.style.display = "none";
+
+        const gamesPerPage = games.length;
+        console.log(gamesPerPage);
 
         games.forEach(game => {
             gameContainer.innerHTML += `
@@ -40,6 +44,8 @@ const getGamsAPI = async (url) => {
         gameContainer.innerHTML += `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`;
         console.log(err)
     }
+
+    return gamesPerPage;
 } 
 getGamsAPI(baseUrl);
 
