@@ -9,6 +9,15 @@ searchButton.addEventListener("click", function() {
     window.location = `search-result.html?search=${searchValue}`
 })
 
+searchInput.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault()
+        let searchValue = searchInput.value
+        sessionStorage.setItem("param", searchValue);
+        window.location = `search-result.html?search=${searchValue}`
+    }
+})
+
 
 
 

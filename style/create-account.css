@@ -11,11 +11,15 @@
   padding: 3px;
 }
 
-/* .create-account-container {
+.login-container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-} */
+  place-items: center;
+}
+
+.therd-party-login {
+  display: grid;
+  place-items: center;
+}
 
 .therd-party-login > * {
   background-color: white;
@@ -25,7 +29,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 1rem 0;
-  max-width: 350px;
+  width: 350px;
   cursor: pointer;
 }
 
@@ -37,7 +41,8 @@
   background-color: black;
   border-radius: 4px;
   color: white;
-  max-width: 350px;
+  width: 350px;
+  margin: 1rem;
   padding: 1em;
   margin-bottom: 2rem;
 }
