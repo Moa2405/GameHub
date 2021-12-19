@@ -40,7 +40,6 @@
 .carousel__content {
   width: 100%;
   color: black;
-  position: absolute;
   bottom: 0;
   padding: 0.5rem;
   background-color: #03dac5;

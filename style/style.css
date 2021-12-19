@@ -56,7 +56,7 @@ button:hover {
 main {
   display: grid;
   place-items: center;
-  gap: 9em;
+  gap: 4em;
   margin-top: 2em;
 }
 
