@@ -1,0 +1,107 @@
+.latest-games-container {
+  display: grid;
+  place-items: center;
+}
+
+.latest-games {
+  width: 100%;
+  padding: 2em;
+  display: grid;
+  place-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-width: 900px;
+}
+
+.carousel__content-container {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  clip-path: circle(0% at 0 50%);
+}
+
+.carousel-game-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide-active {
+  clip-path: circle(150% at 0 50%);
+  transition: 1s;
+  transition-property: clip-path;
+}
+
+.carousel__content {
+  width: 100%;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem;
+  background-color: #03dac5;
+  font-size: 1.5em;
+}
+
+.carousel__content .carousel__post-name {
+  font-size: 19px;
+}
+
+.carousel__content .carousel__post-excerpt {
+  font-size: 14px;
+  margin-left: 0.5em;
+  display: none;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.carousel__btn--left {
+  left: 10px;
+}
+
+.carousel__btn--right {
+  right: 10px;
+}
+
+.carousel__nav-bnt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.carousel__nav-bnt {
+  margin: 0 0.3rem;
+  height: 10px;
+  width: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 5px;
+}
+
+.carousel__nav-bnt-active {
+  background-color: white;
+}
+
+.is-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 350px) {
+  .carousel__content .carousel__post-excerpt {
+    display: block;
+  }
+}

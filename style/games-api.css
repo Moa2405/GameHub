@@ -2,8 +2,12 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
-  margin: 1rem;
   place-items: center;
+  margin-top: 1em;
+}
+
+section {
+  padding: 1em;
 }
 
 .filter-container {
@@ -15,26 +19,19 @@
   flex-direction: column;
 }
 
-select {
-  color: black;
-  margin: 1rem;
+.filter-option {
+  font-weight: 200;
+  background: var(--primary-color);
+  margin: 0.2rem;
   border: none;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 14px;
   cursor: pointer;
+  padding: 0.5em;
 }
 
 select:hover {
   background-color: #c8c8c8;
-}
-
-.price-filter-bnt,
-.name-filter-bnt {
-  height: 24px;
-  margin: 1rem;
-  padding: 0;
-  width: 190px;
-  background-color: white;
 }
 
 .price-filter-bnt:hover,
@@ -58,10 +55,9 @@ select:hover {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  /* height: 400px; */
   background-color: black;
   color: white;
+  padding: 1em;
 }
 
 .short-description-wrapper a p {

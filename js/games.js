@@ -18,6 +18,7 @@ const getGamsAPI = async (url) => {
         const fetchGames = await fetch(url);
 
         const games = await fetchGames.json();
+        console.log(games)
 
         spinner.style.display = "none";
 

@@ -6,6 +6,13 @@
   --background-color: #292929;
 }
 
+.primary-color {
+  background: var(--primary-color);
+}
+.secondary-color {
+  background: var(--secondery-color);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -22,19 +29,22 @@ html {
 }
 
 body {
-  min-height: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1400px;
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
+  place-items: center;
+  grid-template-rows: auto 1fr auto;
   background-color: var(--background-color);
 }
+
 button {
   background-color: var(--primary-color);
   border-radius: 4px;
   border: none;
   font-size: 18px;
-  height: 38px;
-  padding: 9px;
-  margin: 10px;
+  font-weight: 500;
+  padding: 0.5em;
   color: black;
   cursor: pointer;
 }
@@ -44,13 +54,10 @@ button:hover {
 }
 
 main {
-  /* margin-top: 30px; */
-  place-self: center;
-  min-height: calc(100vh - 220px);
-}
-
-.content-header {
-  margin: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 9em;
+  margin-top: 2em;
 }
 
 .content-header h1 {
@@ -59,28 +66,29 @@ main {
   font-family: "Roboto", serif;
 }
 
-header,
-footer {
+header {
   width: 100%;
-  background-color: #000000;
-  box-shadow: black 3px 3px 20px;
 }
 
 .header-container {
-  margin: auto;
-  max-width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 23px;
+  background: black;
 }
 
 footer {
+  background: black;
+  width: 100%;
+  padding: 2em;
   grid-row-start: 3;
   grid-row-end: 4;
 }
 
 .footer-container {
+  padding: 2em;
   margin: auto;
   display: flex;
   height: 100%;
@@ -88,7 +96,6 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   padding: 4px;
-  max-width: 1400px;
 }
 
 footer h3 {
@@ -150,7 +157,6 @@ nav {
   top: 49px;
   right: 0px;
   background-color: black;
-  height: 50vh;
 
   display: none;
   z-index: 1000;
@@ -165,12 +171,12 @@ nav {
 }
 
 nav ul {
-  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  gap: 2em;
 }
 
 nav ul li a {
@@ -201,10 +207,9 @@ nav ul li a:hover {
 }
 
 .gamehub-slogan {
-  color: #ffffff;
-  margin: 5px;
-  margin: 1rem;
-  font-size: 2em;
+  color: #9e9e9e;
+  font-size: 1em;
+  margin: 1em;
 }
 
 label i {
@@ -266,9 +271,6 @@ label i {
   }
 }
 @media screen and (min-width: 600px) {
-  /* .cart {
-    display: block;
-  } */
   .header-container label {
     justify-self: flex-end;
   }
@@ -302,7 +304,7 @@ label i {
     height: 27px;
     z-index: 100;
     display: block;
-    width: 50%;
+    width: 80%;
   }
   nav ul {
     flex-direction: row;
@@ -312,10 +314,6 @@ label i {
   }
 }
 @media screen and (min-width: 900px) {
-  /* .nav-search {
-    margin-left: 30px;
-    width: 33%;
-  } */
   #input-search {
     width: 180px;
   }
@@ -325,12 +323,6 @@ label i {
 }
 
 @media screen and (min-width: 1200px) {
-  /* nav {
-    width: 25%;
-  } */
-  /* .nav-search {
-    width: 43%;
-  } */
   #input-search {
     width: 270px;
   }

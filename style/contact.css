@@ -5,10 +5,14 @@
   margin-bottom: 1rem;
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 350px;
+  gap: 2em;
 }
 
-form {
-  width: 350px;
+#contact-form {
+  width: 100%;
+  display: grid;
+  gap: 2em;
 }
 
 form input,
@@ -16,8 +20,7 @@ form textarea {
   font-size: 16px;
   padding: 0px;
   outline: none;
-  /* color: var(--primary-text-color); */
-  border: 2px solid var(--primary-color);
+  border: none;
   border-radius: 4px;
   height: 40px;
   padding: 3px;
@@ -30,11 +33,11 @@ form label {
 
 .form-last-first-name {
   display: flex;
-  justify-content: space-between;
+  gap: 0.5em;
 }
 
 .form-last-first-name input {
-  width: 170px;
+  width: 100%;
 }
 
 .form-first-name,
@@ -43,26 +46,5 @@ form label {
 .contact-message {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
-}
-
-.contact-message textarea {
-  height: 150px;
-}
-
-.contact-icon {
-  display: none;
-  align-self: center;
-  height: 260px;
-  background-image: url("/images/user-headset-solid2.png");
-  background-size: cover;
-}
-
-@media screen and (min-width: 700px) {
-  .contact-icon {
-    display: block;
-  }
-  .contact-container {
-    grid-template-columns: 1fr 1fr;
-  }
+  gap: 1em;
 }

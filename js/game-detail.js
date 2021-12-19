@@ -15,31 +15,149 @@ const getGameDetail = async () => {
         const fetchGameDetail = await fetch("https://utviklermoa.no/gamehub/wp-json/wc/store/products/" + gameId );
         const gameDetail = await fetchGameDetail.json();
         
-        hederHTML.innerHTML = gameDetail.name;
 
         gameDetalNav.innerHTML = gameDetail.name;
+
+        console.log(gameDetail)
+
 
         document.title = "GameHub | " + gameDetail.name;
 
         spinner.style.display = "none";
             
+        gameDetailContainerHTML.innerHTML = 
+            `<div class="img-wrapper">
+                <img class="detail-img" src="${gameDetail.images[0].src}" alt="${gameDetail.name}">
+            </div>
+
+            <div>
+            
+            <div class="game-detail-info-container">
+
+                <div class="content-header">
+                    <h1 class="detail-header">${gameDetail.name}</h1>
+                </div>
+       
+                <p class="description">${gameDetail.short_description}</p>
+
+                <div class="price">Price
+                    ${gameDetail.prices.price}
+                    $
+                </div>
+
+                <div>
+                    <button onclick="addItemToCart()">Add to cart</button>
+                </div>
+
+            </div>`
+
+
+
+
+        const fetchRecomended = await fetch(`https://utviklermoa.no/gamehub/wp-json/wc/store/products?category=${gameDetail.categories[0].id}&per_page=5`)
+        const recomendedGames = await  fetchRecomended.json()
+
+        console.log(recomendedGames)
+
+        const carouselConteiner = document.querySelector(".carousel");
+        const carouselNavBntContainer = document.querySelector(".carousel__nav-bnt-container");
+        const arrowPriv = document.querySelector(".carousel__btn--left");
+        const arrowNext = document.querySelector(".carousel__btn--right");
+
+        carouselConteiner.innerHTML = ""
+
+        for(let i = 0; i < recomendedGames.length; i++ )  {
+
+            if (recomendedGames[i].name === gameDetail.name ) {
+                continue
+            }
+    
+            carouselConteiner.innerHTML += ` 
+                <figure class="carousel__content-container">
+                    <a href="game-detail.html?id=${recomendedGames[i].id}">
+                    
+                        <img class="carousel-game-img" src="${recomendedGames[i].images[0].src}" alt="${recomendedGames[i].images[0].alt}">                                            
+
+                        <div class="carousel__content">
+                            <p class="game-name-link">${recomendedGames[i].name}</p>
+
+                        </div>
+                    </a>
+                </figure>`;
+        };
+
+        carouselConteiner.firstElementChild.classList.add("slide-active");
+        const slides = Array.from(carouselConteiner.children);
+        const carouselContentContainer = document.querySelectorAll('.carousel__content-container');
         
-        gameDetailContainerHTML.innerHTML = `<div class="img-wrapper">
-                                                <img class="detail-img" src="${gameDetail.images[0].src}" alt="${gameDetail.name}">
-                                             </div>
-                                             <h1 class="game-name">${gameDetail.name}</h1>
+        for (i = 0; i < slides.length; i++) {
+            carouselNavBntContainer.innerHTML += `<button class="carousel__nav-bnt"></button>`;
+        }
+        
+        const navBtn = document.querySelectorAll('.carousel__nav-bnt');
+        
+        carouselNavBntContainer.firstElementChild.classList.add("carousel__nav-bnt-active");
+        
+        
+        const dislayNewSlide = (index) => {
+            
+            carouselContentContainer.forEach((slide) => {
+                slide.classList.remove('slide-active');
+                
+                navBtn.forEach((btn) => {
+                    btn.classList.remove('carousel__nav-bnt-active');
+                });
+                
+            });
+            
+            carouselContentContainer[index].classList.add('slide-active');
+            navBtn[index].classList.add('carousel__nav-bnt-active');
+        }
+        
+        const hideShowArrows = (index) => {
+            if (index === 0) {
+                arrowPriv.classList.add("is-hidden");
+                arrowNext.classList.remove("is-hidden");
+            }
+            else if (index === slides.length -1) {
+                arrowNext.classList.add("is-hidden");
+            }
+            else {
+                arrowNext.classList.remove("is-hidden");
+                arrowPriv.classList.remove("is-hidden");
+            }
+        }
+        
+        arrowNext.onclick = () => {
+            const currentPost = carouselConteiner.querySelector(".slide-active");
+            const nextPost = currentPost.nextElementSibling;
+            const indexOfSlide = slides.findIndex(post => post === nextPost);
+            
+            dislayNewSlide(indexOfSlide);
+            
+            hideShowArrows(indexOfSlide);
+        }
+        
+        arrowPriv.onclick = () => {
+            const currentPost = carouselConteiner.querySelector(".slide-active");
+            const privPost = currentPost.previousElementSibling; 
+            const indexOfSlide = slides.findIndex(post => post === privPost);
+            
+            dislayNewSlide(indexOfSlide);
+            
+            hideShowArrows(indexOfSlide);
+        }
+        
+        navBtn.forEach((btn, index) => {
+            btn.onclick = () => {
+                
+                dislayNewSlide(index);
+                
+                hideShowArrows(index);
+            };
+        });
+        
 
-                                             <div class="game-detail-info-container">
-                                                <div class="scroll-box">
-                                                    <p class="description">${gameDetail.description}</p>
-                                                </div>
-                                                
-                                                <div class="game-name-cart-button-container">
-                                                    <p class="price">${gameDetail.prices.price},-<p>
-                                                    <button onclick="addItemToCart()">Add to cart</button>
-                                                </div>
-
-                                             </div>`  
     }
 
     catch (err) {
@@ -47,10 +165,14 @@ const getGameDetail = async () => {
         gameDetailContainerHTML.innerHTML = `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`;
         console.log(err)
     }
+
+    
     
 }
 
 getGameDetail()
+
+
 
 
 total = 0;
