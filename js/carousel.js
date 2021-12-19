@@ -1,5 +1,6 @@
 const carouselConteiner = document.querySelector(".carousel");
 const carouselNavBntContainer = document.querySelector(".carousel__nav-bnt-container");
+
 const arrowPriv = document.querySelector(".carousel__btn--left");
 const arrowNext = document.querySelector(".carousel__btn--right");
 
@@ -18,17 +19,17 @@ const fetchLatestPosts = async () => {
         featuredGames.forEach((game) =>  {
     
             carouselConteiner.innerHTML += ` 
-            <figure class="carousel__content-container">
-                <a href="game-detail.html?id=${game.id}">
-                
-                    <img class="carousel-game-img" src="${game.images[0].src}" alt="${game.images[0].alt}">                                            
+                <figure class="carousel__content-container">
+                    <a href="game-detail.html?id=${game.id}">
+                    
+                        <img class="carousel-game-img" src="${game.images[0].src}" alt="${game.images[0].alt}">                                            
 
-                    <div class="carousel__content">
-                        <p class="game-name-link">${game.name}</p>
+                        <div class="carousel__content">
+                            <p class="game-name-link">${game.name}</p>
 
-                    </div>
-                </a>
-            </figure>`
+                        </div>
+                    </a>
+                </figure>`
             ;
         });
         

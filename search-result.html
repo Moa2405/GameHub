@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/games-api.css">
+    <link rel="stylesheet" href="style/games.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/fb2425a635.js" crossorigin="anonymous"></script>
@@ -61,10 +61,54 @@
             
         </div>
 
+        <div class="">
+            
+            <button class="show-filter-options-btn">Filter <i class="fal fa-sliders-h"></i></button>
+
+            <div class="filter-container">
+
+                <div class="filter-wrapper">
+    
+                    <div class="catagory-wrapper">
+                        <select class="filter-option" name="categories" id="categories">
+                            <option value="">Filter bay catagort</option>                    
+                            <option value="featured">Featured</option>                    
+                            <option value="16">Action</option>
+                            <option value="18">Shooter</option>
+                            <option value="19">Adventure</option>
+                            <option value="20">Puzzle</option>
+                            <option value="21">Role-playing</option>
+                        </select>
+                    </div>
         
-        <div class="game-container">
-            <div class="spinner"></div>
+                    <div class="per-page-wrapper">
+                        <select class="filter-option" name="per-page" id="per-page">
+                            <option value="20">Games pre page</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+        
+                    <div>
+                        <button class="price-filter-bnt filter-option">Sort by price<i class="fas fa-angle-down" id="price-filter-icon"></i></button>
+                    </div>
+                    <div>
+                        <button class="name-filter-bnt asc filter-option">Sort by name</button>
+                    </div> 
+                    
+                </div>
+            </div>
+    
+            
+            <div class="game-container">
+                <div class="spinner"></div>
+            </div>
+
+
         </div>
+
        
         
 

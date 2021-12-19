@@ -67,15 +67,14 @@ select:hover {
 
 .img-wrapper-link {
   height: 100%;
+  width: 100%;
+  aspect-ratio: 3 / 2;
 }
 
 .game-img {
-  border-radius: 10px;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  background-position: center;
+  object-fit: cover;
   cursor: pointer;
 }
 
