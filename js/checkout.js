@@ -4,8 +4,6 @@ const checkoutGames = window.localStorage.getItem("games");
 
 const formatedCheckoutGames = JSON.parse(checkoutGames);
 
-console.log(formatedCheckoutGames)
-
 if (formatedCheckoutGames.length === 0) {
     checkoutGmamesContainer.innerHTML = `<p>Yor shopping cart is empty<p>`;
 

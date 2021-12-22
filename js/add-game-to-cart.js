@@ -16,9 +16,6 @@ const addItemToCart = (game) => {
         window.localStorage.setItem("games", "[]");
     }
 
-
-    console.log(gamesInCart)
-
     if (!gamesInCart.includes(game)) {
 
         gamesInCart.push(game)
@@ -27,7 +24,6 @@ const addItemToCart = (game) => {
         alert("game allredy added to cart")
     }
 
-    
     window.localStorage.setItem("games", JSON.stringify(gamesInCart))
     
     let totalGamesInCart = JSON.parse(window.localStorage.getItem("games"))

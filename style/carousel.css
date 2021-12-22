@@ -45,6 +45,7 @@
   padding: 0.5rem;
   background-color: #03dac5;
   font-size: 1.5em;
+  display: none;
 }
 
 .carousel__content .carousel__post-name {
@@ -102,6 +103,9 @@
 
 @media screen and (min-width: 350px) {
   .carousel__content .carousel__post-excerpt {
+    display: block;
+  }
+  .carousel__content {
     display: block;
   }
 }

@@ -1,5 +1,13 @@
 const gameContainer = document.querySelector(".game-container");
 const spinner = document.querySelector(".spinner");
+const categories = document.querySelector("#categories");
+const perPage = document.querySelector("#per-page");
+const priceFilterBnt = document.querySelector(".price-filter-bnt");
+const priceFilterIcon = document.querySelector("#price-filter-icon");
+const pagesNavigaterContainer = document.querySelector(".pages-container");
+const sortByNameBnt = document.querySelector(".name-filter-bnt");
+const filterContainer = document.querySelector(".filter-container");
+const showFilterOptionsBtn = document.querySelector(".show-filter-options-btn");
 const searchHeader = document.querySelector(".content-header");
 
 const params = new URLSearchParams(window.location.search);
@@ -54,3 +62,77 @@ const getSearchGames = async (url) => {
 }
 
 getSearchGames(`${baseUrl}?search=${searchParam}&per_page=20`);
+
+showFilterOptionsBtn.addEventListener("click", function(){
+    if (filterContainer.style.display === "none") {
+        filterContainer.style.display = "block";
+    }
+    else {
+        filterContainer.style.display = "none";
+    }
+})
+
+
+
+priceFilterBnt.addEventListener("click", function(){
+    let priceFilterUrl = "&orderby=price";
+    let ascOrDescUrl;
+
+    if (priceFilterIcon.classList.contains("fa-angle-down")) {
+        priceFilterIcon.classList.remove("fa-angle-down");
+        priceFilterIcon.classList.add("fa-angle-up");
+        ascOrDescUrl = "?order=asc";
+    }
+    else {
+        priceFilterIcon.classList.remove("fa-angle-up");
+        priceFilterIcon.classList.add("fa-angle-down");
+        ascOrDescUrl = "?order=desc";
+    }
+    gameContainer.innerHTML = "";
+
+    getSearchGames(baseUrl + ascOrDescUrl + priceFilterUrl); 
+})
+
+
+sortByNameBnt.addEventListener("click", function() {
+    let sortByTitle = "&orderby=title";
+    let ascOrDescUrl;
+
+    if (sortByNameBnt.classList.contains("asc")) {
+        sortByNameBnt.classList.remove("asc");
+        sortByNameBnt.classList.add("desc");
+        ascOrDescUrl = "?order=asc";
+    }
+    else {
+        sortByNameBnt.classList.remove("desc");
+        sortByNameBnt.classList.add("asc");
+        ascOrDescUrl = "?order=desc";
+    }
+
+    gameContainer.innerHTML = "";
+
+    getSearchGames(baseUrl + ascOrDescUrl + sortByTitle);
+})
+
+
+categories.onchange = (event) => {
+    let categoryUrl;
+    if (categories.value === "featured") {
+        categoryUrl = "?featured=true";
+    }
+    else {
+        const catagoryChosen = event.target.value;
+        categoryUrl = `?category=${catagoryChosen}`;
+    }
+    
+    gameContainer.innerHTML = "";
+    
+    getSearchGames(baseUrl + categoryUrl);
+}
+
+
+perPage.onchange = (event) => {
+    let newUrl = `${baseUrl}?per_page=${event.target.value}`;
+    gameContainer.innerHTML = "";
+    getSearchGames(newUrl);
+}
