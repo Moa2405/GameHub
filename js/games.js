@@ -18,28 +18,22 @@ const getGamsAPI = async (url) => {
         const fetchGames = await fetch(url);
 
         const games = await fetchGames.json();
-        console.log(games)
 
         spinner.style.display = "none";
 
         games.forEach(game => {
-            gameContainer.innerHTML += `
-                                        <div class="game-card">
-                                            <a class="img-wrapper-link"href="game-detail.html?id=${game.id}">                   
-                                                <img class="game-img" src="${game.images[0].src}" alt="${game.name}">                                            
-                                            </a>
-                                            <a href="game-detail.html?id=${game.id}"> 
-                                                <p class="game-name-link">${game.name}</p>
-                                            </a>
-                                            <div class="short-description-wrapper">
-                                                <a href="game-detail.html?id=${game.id}"> 
-                                                    ${game.short_description}
-                                                </a>    
-                                            </div>
-                                            <p>${game.prices.price},-</p>
-                                            <button onclick="addItemToCart()" class="add-to-cart">Add to cart</button>
-                                        </div>
-                                        `;           
+            gameContainer.innerHTML += generateGameCard(game);           
+        })
+
+        const addToCartBnts = document.querySelectorAll(".add-to-cart");
+
+        addToCartBnts.forEach((bnt, index, game) => {
+
+            game = games[index].id;
+
+            bnt.onclick = (e) => {
+                addItemToCart(game)
+            }
         })
 
     }
@@ -129,12 +123,7 @@ perPage.onchange = (event) => {
 }
 
 
-count = 0;
-const addItemToCart = (event) => {
-    console.log();
-    count ++;
-    localStorage.setItem("cart-count", count);
-    document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
-}
+
+
 
 

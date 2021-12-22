@@ -1,129 +1,73 @@
-.content-header h1 {
-  color: var(--primary-text-color);
-  font-family: "Roboto", serif;
-}
-
-.progress-bar {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  height: 60px;
-  width: 320px;
-  background-image: url("/images/icons/progressbar5.png");
-  background-size: cover;
-}
-
-table {
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 4px;
-  background-color: black;
+.shopping-cart-items {
   color: white;
-  width: 350px;
-  border-collapse: separate;
-  border-spacing: 1rem;
-}
-
-.game-img-wrapper {
-  height: 40px;
-  width: 40px;
-}
-
-img {
-  background-size: cover;
-  height: 100%;
-  width: auto;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
-}
-
-.checkout-grid-container {
-  color: var(--primary-text-color);
-  width: 354px;
-  height: 250px;
+  width: 100%;
+  max-width: 700px;
   display: grid;
-  grid-template-columns: 50% 1fr 1fr 1fr;
-  grid-template-rows: 10% 45% 45%;
+  gap: 1em;
+}
+
+.checkout-games-container {
+  color: white;
+  background: #414141;
+  padding: 1em;
+  display: grid;
+  gap: 1em;
+  font-size: 1em;
+  width: 100%;
+}
+
+.checkout-game-card {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  background-color: #232323;
+  padding: 0.5em;
+}
+
+.checkout-img-container {
+  max-width: 150px;
+  aspect-ratio: 3 / 2;
+}
+
+.checkout-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  border-top: 2px solid var(--secondery-color);
-  border-left: 2px solid var(--secondery-color);
-  margin-bottom: 1em;
+  gap: 1em;
 }
 
-.checkout-grid-container > div {
-  border-bottom: 2px solid var(--secondery-color);
-  border-right: 2px solid var(--secondery-color);
-}
-
-.game-card {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-}
-
-.game-img1,
-.game-img2 {
-  height: 50px;
-  width: auto;
-  background-size: cover;
-  margin: 1rem;
-}
-
-.quantety-container,
-.game-price,
-.total-game-price {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.input {
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.game-info {
+.checkout-game-img {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 100%;
+  object-fit: cover;
 }
 
-.new {
-  color: var(--primary-color);
-}
-.used {
-  color: var(--secondery-color);
+.amount-of-game {
+  max-width: 50px;
 }
 
 .shipment-payment-container {
+  max-width: 700px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .payment-container,
 .shipping-container {
+  width: 100%;
+  max-width: 350px;
   position: relative;
-  /* height: 500px; */
   display: flex;
   flex-direction: column;
-  max-width: 350px;
-  background-color: black;
+  background-color: #414141;
   border-radius: 4px;
   padding: 1em;
   color: var(--primary-text-color);
-  margin: 1rem;
 }
 
 .payment-options {
@@ -134,22 +78,15 @@ input[type="number"] {
   margin-bottom: 1em;
 }
 
-.payment-form {
+.payment-form,
+.shipment-form {
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1em;
 }
-
-/*.payment-options input[type="radio"] {
-  color: var(--primary-color);
-}*/
-
-.payment-name-container,
-.card-no,
-.card-cvc,
-.expiry-date,
-.shipping-container form ul li {
+.form-input-container {
   margin: 0.5em 0em;
   font-size: 12px;
   display: flex;
@@ -157,39 +94,11 @@ input[type="number"] {
   color: var(--primary-text-color);
 }
 
-.payment-name-container input,
-.card-no input,
-.card-cvc input,
-.expiry-date input,
-.shipping-container form ul li input {
-  border-radius: 4px;
-  height: 35px;
-}
-
-.zip-code {
-  width: 90px;
-}
-
-.card-no-cvc {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-cvc {
-  width: 30%;
-}
-
-.card-no {
-  width: 68%;
-}
-
-.expiry-date {
-  width: 30%;
+.form-input-container input {
+  height: 2em;
 }
 
 .divider {
-  margin: 1em 0;
   height: 2px;
   width: 100%;
   background-color: var(--primary-color);
@@ -209,27 +118,33 @@ input[type="number"] {
   margin-bottom: 1em;
 }
 
-.total-amount p {
-  font-weight: 400;
-  font-size: 24px;
-}
-.total-amount h1 {
-  font-weight: 500;
-  font-size: 24px;
-}
-
 .payment-button {
   background-color: gray;
 }
 
+@media screen and (min-width: 300px) {
+  .checkout-info {
+    flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .checkout-img-container {
+    max-width: 300px;
+  }
+
   .checkout-grid-container {
     width: 600px;
+  }
+
+  .checkout-info {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 772px) {
   .shipment-payment-container {
     flex-direction: row;
+    align-items: baseline;
   }
 }
 

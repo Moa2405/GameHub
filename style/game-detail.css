@@ -6,7 +6,7 @@
   color: white;
 }
 .img-wrapper {
-  max-width: 430px;
+  max-width: 560px;
 }
 
 .detail-img {
@@ -36,7 +36,7 @@ p {
 
 .latest-games-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 500px;
   color: white;
 }
 

@@ -20,14 +20,6 @@ section {
   align-items: center;
 }
 
-.progress-bar {
-  margin-top: 1em;
-  height: 111px;
-  width: 320px;
-  background-image: url("/images/icons/checkout-success.svg");
-  background-size: cover;
-}
-
 .success-icon i {
   color: var(--secondery-color);
 }

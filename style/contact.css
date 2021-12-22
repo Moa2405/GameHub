@@ -1,5 +1,5 @@
 .contact-container {
-  background-color: black;
+  background-color: #414141;
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 1rem;
@@ -46,5 +46,4 @@ form label {
 .contact-message {
   display: flex;
   flex-direction: column;
-  gap: 1em;
 }

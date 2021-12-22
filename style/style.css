@@ -6,13 +6,6 @@
   --background-color: #292929;
 }
 
-.primary-color {
-  background: var(--primary-color);
-}
-.secondary-color {
-  background: var(--secondery-color);
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -38,6 +31,7 @@ body {
   background-color: var(--background-color);
 }
 
+.cta-button,
 button {
   background-color: var(--primary-color);
   border-radius: 4px;
@@ -53,22 +47,34 @@ button:hover {
   background-color: #00887a;
 }
 
+.primary-color {
+  background: var(--primary-color);
+}
+.secondary-color {
+  background: var(--secondery-color);
+}
+
 main {
+  width: 100%;
+  max-width: 900px;
   display: grid;
   place-items: center;
+  padding: 1em;
   gap: 4em;
-  margin-top: 2em;
   margin-bottom: 3em;
 }
 
 .content-header h1 {
-  font-size: 30px;
+  font-size: 1.2em;
   color: var(--primary-text-color);
   font-family: "Roboto", serif;
 }
 
 header {
   width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1em;
 }
 
 .header-container {
@@ -76,7 +82,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 23px;
+  padding: 1em;
   background: black;
 }
 
@@ -118,45 +124,47 @@ footer h3 {
 }
 
 .nav-search {
+  border-radius: 25px;
+  padding: 0.5em;
+  width: 100%;
+  max-width: 600px;
+  background: #9e9e9e;
   display: flex;
   align-items: center;
 }
 
 #input-search {
   height: 27px;
-  width: 100px;
-  border-radius: 4px 0px 0px 4px;
+  width: 100%;
   outline: none;
   border: none;
-  padding: 7px;
   font-size: 16px;
+  background: transparent;
 }
 
 .search-button {
-  margin: 0;
-  padding-left: 5px;
-  padding-top: 2px;
-  width: 33px;
-  border-radius: 0px 4px 4px 0px;
-  height: 27px;
   border: none;
-  background-color: var(--primary-color);
+  background: transparent;
 }
 
 .search-button i {
   color: black;
-  font-size: 23px;
 }
 
 .fa-bars {
   color: var(--primary-color);
 }
 
+.fa-shopping-cart {
+  color: var(--primary-color);
+}
+
 nav {
   padding: 17.5px 17.5px;
   position: absolute;
-  top: 49px;
+  top: 79px;
   right: 0px;
+  width: 100%;
   background-color: black;
 
   display: none;
@@ -172,6 +180,7 @@ nav {
 }
 
 nav ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -193,24 +202,22 @@ nav ul li a:hover {
 }
 
 .site-navigator {
+  width: 100%;
   display: flex;
-  margin: 5px;
-  display: none;
+  gap: 0.3em;
+  font-size: 0.8em;
 }
 
 .site-navigator > * {
-  color: rgb(179, 179, 179);
-  margin: 0.5em;
+  color: #9e9e9e;
 }
-
-.gamehub-slogan-wrapper {
-  text-align: center;
+.site-navigator > *:hover {
+  color: white;
 }
 
 .gamehub-slogan {
-  color: #9e9e9e;
   font-size: 1em;
-  margin: 1em;
+  color: #9e9e9e;
 }
 
 label i {
@@ -254,6 +261,29 @@ label i {
   animation: spin 2s linear infinite;
 }
 
+.container-center-align {
+  display: grid;
+  place-items: center;
+  gap: 1em;
+}
+
+.section__header-container {
+  display: grid;
+  gap: 0.8em;
+  font-size: 1em;
+  color: white;
+}
+
+.section__sub-header {
+  color: rgb(190, 190, 190);
+  font-size: 1em;
+}
+
+.section__content-container {
+  display: grid;
+  gap: 2em;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -263,19 +293,31 @@ label i {
   }
 }
 
+@media screen and (min-width: 370px) {
+  .site-navigator {
+    font-size: 1em;
+    justify-content: start;
+    padding: 0 1em;
+  }
+  .content-header h1 {
+    font-size: 2em;
+  }
+  .gamehub-slogan {
+    font-size: 2em;
+    color: #9e9e9e;
+  }
+}
+
 @media screen and (min-width: 550px) {
   .site-navigator-github-slogan-wrapper {
     flex-direction: row;
   }
-  .site-navigator {
-    display: block;
-  }
 }
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   .header-container label {
     justify-self: flex-end;
   }
-}
+} */
 
 @media screen and (min-width: 700px) {
   .header-container {
@@ -283,9 +325,6 @@ label i {
     padding-left: 17px;
   }
 
-  .search-button {
-    background-color: var(--primary-color);
-  }
   .footer-links {
     width: 20%;
     display: flex;
@@ -299,6 +338,9 @@ label i {
 }
 
 @media screen and (min-width: 950px) {
+  .section__header-container {
+    font-size: 1.5em;
+  }
   nav {
     padding: 0px;
     position: static;
@@ -309,22 +351,14 @@ label i {
   }
   nav ul {
     flex-direction: row;
+    justify-content: end;
   }
   .header-container label {
     display: none;
   }
 }
 @media screen and (min-width: 990px) {
-  #input-search {
-    width: 180px;
-  }
   .footer-container {
     flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #input-search {
-    width: 270px;
   }
 }

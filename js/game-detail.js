@@ -15,10 +15,7 @@ const getGameDetail = async () => {
         const fetchGameDetail = await fetch("https://utviklermoa.no/gamehub/wp-json/wc/store/products/" + gameId );
         const gameDetail = await fetchGameDetail.json();
         
-
         gameDetalNav.innerHTML = gameDetail.name;
-
-        console.log(gameDetail)
 
 
         document.title = "GameHub | " + gameDetail.name;
@@ -46,13 +43,19 @@ const getGameDetail = async () => {
                 </div>
 
                 <div>
-                    <button onclick="addItemToCart()">Add to cart</button>
+                    <button>Add to cart</button>
                 </div>
 
-            </div>`
+            </div>`;
 
+            const addGameToCartBnt = gameDetailContainerHTML.querySelector("button");
 
+            addGameToCartBnt.onclick = () => {
 
+                game = gameDetail.id;
+
+                addItemToCart(game);
+            }
 
         const fetchRecomended = await fetch(`https://utviklermoa.no/gamehub/wp-json/wc/store/products?category=${gameDetail.categories[0].id}&per_page=5`)
         const recomendedGames = await  fetchRecomended.json()
@@ -155,32 +158,14 @@ const getGameDetail = async () => {
                 
                 hideShowArrows(index);
             };
-        });
-        
-
+        });   
     }
 
     catch (err) {
         spinner.style.display = "none";
         gameDetailContainerHTML.innerHTML = `<h3 style="color: white">Sorry, it seems we are having some server issues.<br>We are working to solve the problem</h3>`;
         console.log(err)
-    }
-
-    
-    
+    } 
 }
 
 getGameDetail()
-
-
-
-
-total = 0;
-count = 0;
-const addItemToCart = () => {
-    count ++;
-    total += 29.99;
-    localStorage.setItem("cart-count", count);
-    localStorage.setItem("total-amount", total);
-    document.querySelector(".cart-count").innerHTML = localStorage.getItem("cart-count");
-}

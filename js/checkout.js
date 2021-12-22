@@ -1,32 +1,62 @@
-const gameImgOne = document.querySelector(".game-img1");
-const gameImgTwo = document.querySelector(".game-img2");
-const gameNameOne = document.querySelector(".game-name1");
-const gameNameTwo = document.querySelector(".game-name2");
-const miniSpinner = document.querySelector(".mini-spinner");
+const checkoutGmamesContainer = document.querySelector(".checkout-games-container");
 
+const checkoutGames = window.localStorage.getItem("games");
 
-const getGamsAPI = async () => {
-    try {
-        const fetchGames = await fetch("https://api.rawg.io/api/games?key=00789cedfec649d583337ea2538e5185");
+const formatedCheckoutGames = JSON.parse(checkoutGames);
 
-        const respons = await fetchGames.json();
+console.log(formatedCheckoutGames)
 
-        const games = respons.results;
-        miniSpinner.style.display = "none";
-        gameImgOne.innerHTML = `<img src="${games[0].background_image}" alt="${games[0].name}">`;
-        gameImgTwo.innerHTML = `<img src="${games[1].background_image}" alt="${games[1].name}">`;
-        gameNameOne.innerHTML = `<p>${games[0].name}</p>`;
-        gameNameTwo.innerHTML = `<p>${games[1].name}</p>`;
+if (formatedCheckoutGames.length === 0) {
+    checkoutGmamesContainer.innerHTML = `<p>Yor shopping cart is empty<p>`;
 
-    }
-    catch(err) {
-        gameImgOne.innerHTML = `<p>Sorry, it seems we are having some server issues.<br>We are working to solve the problem</p>`;
-        gameImgTwo.innerHTML = `<p>Sorry, it seems we are having some server issues.<br>We are working to solve the problem</p>`;
-        console.log(err)
-    }
-} 
+    document.querySelector(".shipment-payment-container").style.display = "none"
+}
+else {
+    checkoutGmamesContainer.innerHTML = "";
+}
 
-getGamsAPI()
+formatedCheckoutGames.forEach((gameId) => {
+
+    const getCheckoutGames = async () => {
+
+        try {
+    
+            const respons = await fetch(`https://utviklermoa.no/gamehub/wp-json/wc/store/products/${gameId}`);
+    
+            const result = await respons.json();            
+
+            checkoutGmamesContainer.innerHTML += `
+                <div class="checkout-game-card">
+                    <div class="checkout-game-info">
+                        <div class="checkout-img-container">
+                            <img class="checkout-game-img" src="${result.images[0].src}" alt="${result.name}">
+                        </div>
+                        <p class="checkout-game-name">${result.name}</p>
+                    </div>
+                    <div class="checkout-info">
+                        <p class="game-price">$ ${result.prices.price}</p>
+
+                        <div class="game-quant">
+                            <input value="1" type="number" class="amount-of-game">
+                        </div>
+
+                        <div class="trach">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+
+                </div>
+            `;
+
+        }
+        
+        catch (err) {
+            console.log(err);
+        }
+    } 
+    getCheckoutGames()    
+})
+
 
 
 const shipmentForm = document.querySelector(".shipment-form");
@@ -52,7 +82,7 @@ const FormMessage = () => {
     if (checkLength(firstName.value, 2) && checkLength(lastName.value, 2) && validateAddress(address.value) && validateZipCode(zipCode.value)) {
         shipmentFormMessage.style.display = "block";
         shipmentFormMessage.style.backgroundColor = "green";
-        shipmentFormMessage.innerHTML = `<p>Shipment information successfully submitet<p>`;
+        shipmentFormMessage.innerHTML = `<p>Shipment information successfully submited<p>`;
         paymentButton.style.backgroundColor = "#03dac6";
         paymentButton.disabled = false;
     }else {

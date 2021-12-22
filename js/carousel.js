@@ -25,7 +25,7 @@ const fetchLatestPosts = async () => {
                         <img class="carousel-game-img" src="${game.images[0].src}" alt="${game.images[0].alt}">                                            
 
                         <div class="carousel__content">
-                            <p class="game-name-link">${game.name}</p>
+                            <p class="carousel__game-name-link">${game.name}</p>
 
                         </div>
                     </a>

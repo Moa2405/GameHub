@@ -1,32 +1,19 @@
-.home-section_img-container {
-  display: none;
-}
-
 .home-section {
-  font-size: 0.8em;
   max-width: 1200px;
   color: white;
   width: 100%;
   padding: 2em;
   display: grid;
   grid-template-columns: auto auto;
-  gap: 2em;
-}
-
-.home-section__content-container {
-  display: grid;
-  gap: 2em;
-  max-height: 250px;
-}
-
-.home-section__sub-header {
-  color: rgb(190, 190, 190);
+  align-items: center;
+  gap: 1em;
 }
 
 .home-section_img-container {
   min-width: 100px;
   aspect-ratio: 9 / 6;
   max-height: 460px;
+  display: none;
 }
 
 .img {
@@ -41,21 +28,17 @@
   gap: 2em;
 }
 
-.cta-button {
-  padding: 0.5em;
-  color: black;
-  border-radius: 4px;
-  background-color: blanchedalmond;
-}
-
 .latest-games-container {
   width: 100%;
   max-width: 600px;
-  color: white;
+}
+
+.featured-games__container {
+  max-width: 900px;
 }
 
 @media screen and (min-width: 322px) {
-  .home-section {
+  .section__header-container {
     font-size: 1em;
   }
   .cta-container {
@@ -63,12 +46,17 @@
   }
 }
 @media screen and (min-width: 600px) {
-  .home-section {
+  .section__header-container {
     font-size: 1.2em;
   }
 }
 @media screen and (min-width: 600px) {
   .home-section_img-container {
     display: block;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .featured-games__container {
+    grid-template-columns: 1fr 1fr;
   }
 }

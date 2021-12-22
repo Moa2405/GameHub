@@ -1,11 +1,3 @@
-.game-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 30px;
-  place-items: center;
-  margin-top: 1em;
-}
-
 section {
   padding: 1em;
 }
@@ -47,81 +39,6 @@ select:hover {
   content: " Zz-Aa";
 }
 
-.game-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  color: white;
-  padding: 1em;
-}
-
-.short-description-wrapper a p {
-  font-size: 13px;
-  color: white;
-}
-
-.img-wrapper-link {
-  height: 100%;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-}
-
-.game-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.game-img:hover {
-  scale: 1.05;
-}
-
-.game-name-link {
-  text-decoration: none;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  letter-spacing: 0;
-  color: white;
-  margin: 10px;
-}
-
-.game-name-link:hover {
-  scale: 1.05;
-  text-decoration: underline;
-}
-
-p {
-  font-size: 28px;
-  margin: 10px;
-}
-
-/* button {
-  background-color: var(--primary-color);
-  border-radius: 4px;
-  border: none;
-  font-size: 18px;
-  padding: 9px;
-  margin: 10px;
-  color: black;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #00887a;
-} */
-
-@media screen and (min-width: 700px) {
-  .game-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 @media screen and (min-width: 850px) {
   .show-filter-options-btn {
     display: none;
@@ -131,10 +48,5 @@ button:hover {
   }
   .filter-wrapper {
     flex-direction: row;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .game-container {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }

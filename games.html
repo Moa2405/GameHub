@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta data-rh="true" name="description" content="GameHub ♛ The UNIVERS OF GAMES ✔ The ultimate destination for playing">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/games.css">
+    <link rel="stylesheet" href="style/game-card.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/fb2425a635.js" crossorigin="anonymous"></script>
@@ -18,35 +19,40 @@
             
             <a class="nav-logo" href="index.html"><img class="logo-img" src="images/GameHub_Logo.png" alt="Logo-Home"></a>
 
-            
-
             <input type="checkbox" id="hamburger-menu" />
             <label for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
             <nav>
+
                 <ul>
-                    <li><a href="games.html">bye game</a></li>
+                    <li><a href="games.html">buy game</a></li>
                     <li><a href="create-account.html">sell game</a></li>
                     <li><a href="contact.html">contact</a></li>
                     <li><a href="create-account.html">Sign Up</a></li>
-                    <li><a href="account-page.html">Sign In</a></li>
-                    <li><a href="checkout.html"><i class="fal fa-shopping-cart fa-2x"><span class="cart-count"></span></i></a></li>
-                    <li>
-                        <div class="nav-search">
-                            <input type="text" placeholder="Search" name="search" id="input-search">
-                            <button class="search-button">
-                                <i class="fas fa-search fa-1x"></i>
-                            </button>
-                        </div>
-                    </li>
+                    <li><a href="create-account.html">Sign In</a></li>                    
                 </ul>
+
             </nav>
+            
+            <a href="checkout.html"><i class="fal fa-shopping-cart fa-2x" st><span class="cart-count"></span></i></a>
 
         </div>
 
         <div class="site-navigator">
+
             <a href="index.html">Home</a>
             <span> > </span>
             <a href="games.html">Games</a>
+           
+        </div>
+
+        <div class="nav-search">
+
+            <input type="text" placeholder="Search" name="search" id="input-search">
+
+            <div class="search-button">
+                <i class="fas fa-search fa-1x"></i>
+            </div>
+            
         </div>
        
         <div class="gamehub-slogan-wrapper">
@@ -56,11 +62,11 @@
 
     <main>
 
-        <div class="content-header">
-            <h1>Games</h1>
-        </div>
         
-        <section class="">
+        <section class="container-center-align">
+
+            <div class="content-header"><h1>Games</h1></div>
+
             <button class="show-filter-options-btn">Filter <i class="fal fa-sliders-h"></i></button>
 
             <div class="filter-container">
@@ -116,8 +122,9 @@
             </div>
         </div>
     </footer>
+    <script src="js/add-game-to-cart.js"></script>
+    <script src="js/game-card.js"></script>
     <script src="js/search-games.js"></script>
     <script src="js/games.js"></script>
-    <script src="js/update-game-count.js"></script>
 </body>
 </html>

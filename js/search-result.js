@@ -1,6 +1,6 @@
 const gameContainer = document.querySelector(".game-container");
 const spinner = document.querySelector(".spinner");
-const searcheader = document.querySelector(".content-header");
+const searchHeader = document.querySelector(".content-header");
 
 const params = new URLSearchParams(window.location.search);
 const searchParam = params.get("search");
@@ -11,10 +11,8 @@ const getSearchGames = async (url) => {
     try {
         const fetchSearchedGames = await fetch(url)
         const searchResult = await fetchSearchedGames.json()
-    
-        console.log(searchResult);
 
-        searcheader.innerHTML = `<h1>Search result for: ${searchParam}</h1>`
+        searchHeader.innerHTML = `<h1>Search result for: ${searchParam}</h1>`
 
         gameContainer.innerHTML = ""
 
@@ -36,6 +34,17 @@ const getSearchGames = async (url) => {
             }
 
         }
+
+        const addToCartBnts = document.querySelectorAll(".add-to-cart");
+
+        addToCartBnts.forEach((bnt, index, game) => {
+
+            game = searchResult[index].id;
+
+            bnt.onclick = (e) => {
+                addItemToCart(game)
+            }
+        })
 
     }
     catch(err) {
