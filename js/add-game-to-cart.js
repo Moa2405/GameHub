@@ -21,7 +21,7 @@ const addItemToCart = (game) => {
         gamesInCart.push(game)
     }
     else {
-        alert("game allredy added to cart")
+        alert("game already added to cart")
     }
 
     window.localStorage.setItem("games", JSON.stringify(gamesInCart))
