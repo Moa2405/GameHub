@@ -1,7 +1,7 @@
 .game-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
+  gap: 1em;
   place-items: center;
   margin-top: 1em;
 }
