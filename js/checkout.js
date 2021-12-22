@@ -182,6 +182,7 @@ const validateExpiryDate = (expiryDate) => {
 const PaymentMessage = () => {
     if (checkLength(cardHolderName.value, 4) && validateCardNumber(cardNumber.value) && validateCvcNumber(cardCvc.value) && validateExpiryDate(expiryDate.value)) {
         document.location = "/checkout-success.html";
+        window.localStorage.clear();
     }else {
         paymentFormMessage.style.display = "block";
         paymentFormMessage.style.backgroundColor = "red";
