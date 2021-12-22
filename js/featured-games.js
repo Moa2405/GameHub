@@ -26,9 +26,11 @@ const fetchFeaturedGames = async () => {
 
         addToCartBnts.forEach((bnt, index, game) => {
 
-            game = games[index].id;
+            game = featuredGames[index].id;
 
             bnt.onclick = (e) => {
+                e.target.innerHTML = "Item added to cart"
+
                 addItemToCart(game)
             }
         })

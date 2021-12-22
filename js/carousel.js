@@ -13,9 +13,6 @@ const fetchLatestPosts = async () => {
         const results = await respons.json();
         const featuredGames = results;
 
-        console.log(featuredGames)
-
-
         featuredGames.forEach((game) =>  {
     
             carouselConteiner.innerHTML += ` 

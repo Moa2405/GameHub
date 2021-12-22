@@ -50,6 +50,9 @@ const getSearchGames = async (url) => {
             game = searchResult[index].id;
 
             bnt.onclick = (e) => {
+                
+                e.target.innerHTML = "Item added to cart"
+
                 addItemToCart(game)
             }
         })

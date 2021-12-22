@@ -32,6 +32,7 @@ const getGamsAPI = async (url) => {
             game = games[index].id;
 
             bnt.onclick = (e) => {
+                e.target.innerHTML = "Item added to cart"
                 addItemToCart(game)
             }
         })
