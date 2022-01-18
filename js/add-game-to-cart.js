@@ -12,10 +12,6 @@ document.querySelector(".cart-count").innerHTML = gamesInCart.length;
 
 const addItemToCart = (game) => {
 
-    if (!window.localStorage.getItem("games")) {
-        window.localStorage.setItem("games", "[]");
-    }
-
     if (!gamesInCart.includes(game)) {
 
         gamesInCart.push(game)
