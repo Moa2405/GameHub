@@ -8,22 +8,18 @@ let gamesInCart = JSON.parse(window.localStorage.getItem("games"))
 
 document.querySelector(".cart-count").innerHTML = gamesInCart.length;
 
-
-
 const addItemToCart = (game) => {
 
     if (!gamesInCart.includes(game)) {
 
         gamesInCart.push(game)
+
+        document.querySelector(".cart-count").innerHTML = totalGamesInCart.length;
     }
     else {
-        alert("game already added to cart")
+        alert("Game already added to cart")
     }
 
-    window.localStorage.setItem("games", JSON.stringify(gamesInCart))
-    
-    let totalGamesInCart = JSON.parse(window.localStorage.getItem("games"))
-    
-    document.querySelector(".cart-count").innerHTML = totalGamesInCart.length;
+    window.localStorage.setItem("games", JSON.stringify(gamesInCart))  
 }
 
