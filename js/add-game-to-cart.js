@@ -14,7 +14,7 @@ const addItemToCart = (game) => {
 
         gamesInCart.push(game)
 
-        document.querySelector(".cart-count").innerHTML = totalGamesInCart.length;
+        document.querySelector(".cart-count").innerHTML = gamesInCart.length;
     }
     else {
         alert("Game already added to cart")
